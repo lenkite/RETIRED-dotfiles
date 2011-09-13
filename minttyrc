@@ -1,0 +1,9 @@
+BoldAsFont=no
+ForegroundColour=0,0,0
+BackgroundColour=255,255,255
+Transparency=off
+Font=Consolas
+FontHeight=11
+Columns=104
+Rows=29
+FontSmoothing=full
