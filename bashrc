@@ -243,17 +243,21 @@ function gitenv-hub() {
 function proxyset() {
     if [[ $LOGONSERVER == *BLR* ]]; then
         export http_proxy="http://proxy.blrl.sap.corp:8080"
+        export https_proxy="http://proxy.blrl.sap.corp:8080"
     elif [[ $LOGONSERVER == *WDF* ]]; then
         export http_proxy="http://proxy.wdf.sap.corp:8080"
+        export https_proxy="http://proxy.wdf.sap.corp:8080"
     else
         #default to b'lore proxy for now
         export http_proxy="http://proxy.blrl.sap.corp:8080"
+        export https_proxy="http://proxy.blrl.sap.corp:8080"
     fi
     echo "Proxy set to $http_proxy"
 }
 
 function proxyclear() {
     unset http_proxy
+    unset https_proxy
 }
 
 if [[ $USERDOMAIN == SAP_ALL ]]; then
