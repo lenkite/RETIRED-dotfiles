@@ -1,0 +1,27 @@
+[submodule "vim/bundle/vim-ragtag"]
+	path = vim/bundle/vim-ragtag
+	url = https://github.com/tpope/vim-ragtag.git
+[submodule "vim/bundle/vim-surround"]
+	path = vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/bundle/colorschemes"]
+	path = vim/bundle/colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/vim-repeat"]
+	path = vim/bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "vim/bundle/vim-snipmate"]
+	path = vim/bundle/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "vim/bundle/tlib_vim"]
+	path = vim/bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "vim/bundle/vim-addon-mw-utils"]
+	path = vim/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "vim/bundle/snipmate-snippets"]
+	path = vim/bundle/snipmate-snippets
+	url = https://github.com/honza/snipmate-snippets.git
