@@ -1,0 +1,4 @@
+Clone this repository
+If you are on windows run init.bat in ADMINISTRATOR mode command prompt. (This guy creates the hard links to the dotfiles directory. Ex: from .bashrc to dotfiles/.bashrc, etc)
+Then open up cygwin, navigate here and run visetup.sh
+That's all for now.
