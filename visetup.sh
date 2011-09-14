@@ -18,9 +18,9 @@ git submodule add https://github.com/garbas/vim-snipmate.git vim/bundle/vim-snip
 git submodule add https://github.com/tomtom/tlib_vim.git vim/bundle/tlib_vim
 git submodule add https://github.com/MarcWeber/vim-addon-mw-utils.git vim/bundle/vim-addon-mw-utils
 git submodule add https://github.com/honza/snipmate-snippets.git vim/bundle/snipmate-snippets
-git submodule add git://git.wincent.com/command-t.git vim/bundle/command-t
+#git submodule add git://git.wincent.com/command-t.git vim/bundle/command-t
 
-git submodule add https://github.com/sjbach/lusty.git vim/bundle/lusty
+#git submodule add https://github.com/sjbach/lusty.git vim/bundle/lusty
 
 git submodule init
 git submodule update
