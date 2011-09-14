@@ -65,8 +65,8 @@ if [[ $OS = Windows* ]]; then
 fi
 
 
-if [ -f "${HOME}/dotfiles/.bash_aliases" ]; then
-   source "${HOME}/dotfiles/.bash_aliases"
+if [ -f "${HOME}/dotfiles/bash_aliases" ]; then
+   source "${HOME}/dotfiles/bash_aliases"
 fi
 #
 # Some example alias instructions
@@ -275,9 +275,9 @@ shopt -s cmdhist
 export GIT_SSL_NO_VERIFY=true
 
 #Solarized color scheme
-if [[ -e ~/dotfiles/sol.light ]]; then
-    source ~/dotfiles/sol.light
-fi
+#if [[ -e ~/dotfiles/sol.light ]]; then
+#    source ~/dotfiles/sol.light
+#fi
 
 #cdargs
 if [[ -e /usr/share/cdargs/cdargs-bash-completion.sh ]]; then

@@ -1,10 +1,16 @@
-" Tarun Ramakrishna Elankath's vimrc file. Been using VIM for 8 years now. 
-" Re-created from scratch on Aug 20, 2011
-" https://github.com/lenkite/dotfiles
+" Modeline and Notes {
+" vim: set foldmarker={,} foldlevel=0 foldmethod=marker:
+"   Tarun Ramakrishna Elankath's vimrc file. Been using VIM for 8 years now. 
+"   Re-created from scratch on Aug 20, 2011
+"   https://github.com/lenkite/dotfiles
+" }
+
+
+
 
 "Buffer management tipcs from
 "http://vim.wikia.com/wiki/Easier_buffer_switching
-:set hidden
+set hidden
 set wildcharm=<C-Z>
 nnoremap <F10> :b <C-Z>
 
@@ -28,12 +34,7 @@ endif
 
 
 " From Best of VIM Tipcs at http://www.rayninfo.co.uk/vimtips.html
-" visual searching
-:vmap // y/<C-R>"<CR>     "search for visually highlighted text  
-" Pull word under cursor into LHS of a substitute
-:nmap <leader>z :%s#\<<c-r>=expand("<cword>")<cr>\>#
-" Pull Visually Highlighted text into LHS of a substitute
-:vmap <leader>z :<C-U>%s/\<<c-r>*\>/
+
 
 " Quick jumping between splits
 map <C-J> <C-W>j<C-W>_
@@ -72,9 +73,8 @@ map <leader>cd :cd %:p:h<CR>
 cmap w!! %!sudo tee > /dev/null %
 
 
-"http://vim.wikia.com/wiki/Great_wildmode/wildmenu_and_console_mouse
-set wildmenu
-set wildmode=list:longest,full
+" UI related changes {
+"}
 
 "http://stackoverflow.com/questions/2154193/using-vim-as-a-html-editor
 " copy the matchit plugin which is present from VIM6 onwards as part of the
@@ -125,10 +125,24 @@ map <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>i
 
 
+"Call Pathogen {
 filetype off
 call pathogen#infect()
 call pathogen#helptags()
 syntax on
 filetype plugin indent on
+"}
 
+" UI Related {
+"http://vim.wikia.com/wiki/Great_wildmode/wildmenu_and_console_mouse
+set wildmenu
+set wildmode=list:longest,full
+colo zenburn
+" visual searching
+:vmap // y/<C-R>"<CR>     "search for visually highlighted text  
+" Pull word under cursor into LHS of a substitute
+:nmap <leader>z :%s#\<<c-r>=expand("<cword>")<cr>\>#
+" Pull Visually Highlighted text into LHS of a substitute
+:vmap <leader>z :<C-U>%s/\<<c-r>*\>/
+" }
 
