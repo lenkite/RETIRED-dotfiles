@@ -1125,3 +1125,8 @@ cd com.sap.esb.pl/
 ls
 mvn install
 exit
+ls
+gitenv-hub 
+git commit -a
+git push -u origin master
+exit

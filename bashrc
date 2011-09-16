@@ -69,6 +69,10 @@ fi
 if [ -f "${HOME}/dotfiles/bash_aliases" ]; then
    source "${HOME}/dotfiles/bash_aliases"
 fi
+
+if [[ -f /etc/profile.d/wcd.sh ]]; then
+    source /etc/profile.d/wcd.sh
+fi
 #
 # Some example alias instructions
 # If these are enabled they will be used instead of any instructions
