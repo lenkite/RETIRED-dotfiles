@@ -5,8 +5,12 @@
 # User dependent .bash_profile file
 
 # source the users bashrc if it exists
-if [ -f "${HOME}/.bashrc" ] ; then
-  source "${HOME}/.bashrc"
+# this is needed only for cygwin not normal linux
+uname=`uname`
+if [[ $uname == *CYGWIN* ]]; then
+        if [ -f "${HOME}/.bashrc" ] ; then
+          source "${HOME}/.bashrc"
+        fi
 fi
 
 # Set PATH so it includes user's private bin if it exists

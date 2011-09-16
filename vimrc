@@ -110,7 +110,7 @@ call CopyMatchIt()
 " Copied from http://stackoverflow.com/questions/3316244/set-gvim-font-in-vimrc-file
 if has("gui_running")
   if has("gui_gtk2")
-    set guifont=Inconsolata\ 12
+    set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
   elseif has("gui_win32")
     set guifont=Consolas:h11:cANSI
   endif

@@ -20,7 +20,6 @@ mklink %home%\.bash_aliases %dotdir%\bash_aliases
 mklink %home%\.inputrc %dotdir%\inputrc
 mklink %home%\.bash_profile %dotdir%\bash_profile
 mklink %home%\.bashrc %dotdir%\bashrc
-mklink %home%\.bash_history %dotdir%\bash_history
 mklink %home%\.minttyrc %dotdir%\.minttyrc
 
 REM SymLink for Scite
