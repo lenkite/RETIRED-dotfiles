@@ -38,4 +38,4 @@ alias pw='cygpath -aw'
 #fi
 
 alias sshl1="ssh root@10.66.189.121"
-alias mvne="mvn eclipse:eclipse -DdownloadSources -DdownloadJavadocs"
+alias mvne="mvn eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true"

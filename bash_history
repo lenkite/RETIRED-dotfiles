@@ -1130,3 +1130,255 @@ gitenv-hub
 git commit -a
 git push -u origin master
 exit
+git add ds.hanadb/src/
+git add ds.hanadb/pom.xml
+cd ~/dev/pl
+wcd ~/dev/pl
+cd ~/dev/esb-pl/com.sap.esb.pl/master/aggregator.common/
+vi pom.xml 
+cat pom.xml 
+cat pom.xml 
+cd ~/dev/*pl
+cd com.sap.esb.pl/
+which java
+wcd
+vi ~/dotfiles/.bashrc 
+echo $PATH
+vi
+wcd ~/dev/assembly
+wcd ~/dev/assembly*
+wcd ~/dev/*assembly
+cd dev
+cd esb-pl
+find . -iname 'pom.xml'
+vi ./com.sap.esb.pl/master/aggregator.common/pom.xml
+cd com.sap.esb.pl/
+gitenv-hub 
+git push -u origin master
+wcd --help
+wcd -s
+wcd ~/dev*rm.store.jms
+wcd ~/dev/*rm.store.jms
+pd +1
+mvn test
+git pull origin master
+ls -l
+mvn test 2>&1 | tee log.txt
+mvn test 2>&1 > log.txt
+less log.txt 
+pd
+dv
+pd 0
+git add src/main/java/
+git rm src/test/java/basic
+git rm -r src/test/java/basic
+git rm  src/test/java/com/sap/esb/cxf/rmstore/jms/test/Callback.java
+git rm  src/test/java/com/sap/esb/cxf/rmstore/jms/test/CallbackImpl.java
+git rm  src/test/java/com/sap/esb/cxf/rmstore/jms/test/MessageBrowser.java
+git add src/test/java/
+git add src/test/resources/
+cd ~/dev/esb-application-services/
+scp -p -P 29418 i034796@git.wdf.sap.corp:hooks/commit-msg .git/hooks/
+git status
+gitenv-work
+printenv | grep -i git
+git commit -a
+git push ssh://i034796@git.wdf.sap.corp:29418/sandbox/PING/esb-application-services.git HEAD:refs/for/master
+cd */rm*
+wcd *rm*
+mvn instlal
+popd
+cdargs rm.store.jms
+alias
+cdb rm.store.jms
+wcd */rm.store.jms
+ca
+cm
+cdb
+find /usr/ -iname 'cdargs*'
+find /etc -iname 'cdargs*'
+less /etc/profile.d/complete.bash 
+mark
+mark jmsrm
+printenv
+vi ~/.bashrc
+. ~/.bashrc
+mark rmjms
+cdargs
+ls
+mvn install
+cpufreq-info 
+freemem -h
+free -h
+free -g
+free -ml
+ls /usr/sap
+free -t -m
+exit
+wcd -s
+cd ~/dev/esb-pl/com.sap.esb.pl/master/aggregator.common/
+vi pom.xml 
+cat pom.xml 
+cat pom.xml 
+ls -l
+cd ~/dev/*pl
+cd com.sap.esb.pl/
+wcd
+vi ~/dotfiles/.bashrc 
+echo $PATH
+vi
+wcd ~/dev/assembly
+wcd ~/dev/assembly*
+wcd ~/dev/*assembly
+cd dev
+cd esb-pl
+find . -iname 'pom.xml'
+vi ./com.sap.esb.pl/master/aggregator.common/pom.xml
+cd com.sap.esb.pl/
+gitenv-hub 
+git push -u origin master
+which pwd
+/bin/pwd
+echo $OSTYPE 
+cd  ~/dev/esb-application-services/
+gitenv-work
+scp -p -P 29418 i034796@git.wdf.sap.corp:hooks/commit-msg .git/hooks/
+git add com.sap.esb.application.services/master/bundles/rm.store.jms/src/test/
+git add com.sap.esb.application.services/master/bundles/rm.store.jms/src/main
+git status
+git commit -a
+vi com.sap.esb.application.services/master/bundles/pom.xml 
+git add com.sap.esb.application.services/master/bundles/pom.xml 
+git log
+#git push ssh://i034796@git.wdf.sap.corp:29418/sandbox/PING/esb-application-services.git HEAD:refs/for/master
+git diff
+cd com.sap.esb.application.services/master/bundles/rm.store.jms/
+mvn install
+git add pom.xml 
+git commit --amend
+git push ssh://i034796@git.wdf.sap.corp:29418/sandbox/PING/esb-application-services.git HEAD:refs/for/master
+pushd ~/dev/esb-application-services/
+less com.sap.esb.application.services/master/bundles/activemq.default.provider/src/main/java/com/sap/esb/application/services/activemq/provider/impl/DefaultBroker.java 
+less com.sap.esb.application.services/master/configurations/etc/org.apache.activemq.defaultprovider.cfg 
+cd ~/dev/esb-performance-tests/
+ls -al
+cd ..
+cd esb-performance-tests/
+wget http://git.wdf.sap.corp:8080/
+ping newdb-dhcp.wdf.sap.corp
+ping newdb-test.dhcp.wdf.sap.corp
+ssh newdb-test.dhcp.wdf.sap.corp
+git pull git://git.wdf.sap.corp/ESB/esb-performance-tests refs/changes/85/33085/2
+cd cxf.rmstores.test/
+mount -l
+mount -h
+mount -t cifs //production.wdf.sap.corp/nw/ /mnt/prod_nw
+mkdir /mnt/prod_nw
+sudo mkdir /mnt/prod_nw
+sudo mount -t cifs //production.wdf.sap.corp/nw/ /mnt/prod_nw
+man mount
+#sudo mount -t cifs //production.wdf.sap.corp/nw/ /mnt/prod_nw
+man mount.cifs
+sudo mount -t cifs -o user=nw_fw_lkg,password=1CoolCat //production.wdf.sap.corp/nw/ /mnt/prod_nw
+ls /mnt/prod_nw/
+cd /mnt/prod_nw/
+ls DEV/sapjvm/6/
+ls DEV/sapjvm/6/cons/optU/
+cd DEV/sapjvm/6/cons/optU/
+cd linuxx86_64/
+uname -a
+ls
+which java
+ls -al /usr/bin/java
+ls -l /etc/alternatives/java
+ls /opt
+ls /opt/sapjvm_6/
+rsync --help
+rsync --help | grep '-a'
+rsync --help | grep '\-a'
+rsync --help | grep '\-e'
+rsync --help | grep '\-v'
+sudo rsync -av sapjvm_6 /opt/sapjvm_6
+sudo rm -rf /opt/sapjvm_6/
+sudo cp -R sapjvm_6 /opt/
+exit
+wcd ~/dev/assembly
+wcd ~/dev/assembly*
+wcd ~/dev/*assembly
+cd dev
+cd esb-pl
+find . -iname 'pom.xml'
+vi ./com.sap.esb.pl/master/aggregator.common/pom.xml
+cd com.sap.esb.pl/
+mvn install
+gitenv-hub 
+wcd
+cd ~/dotfiles/
+gitenv-hub
+git commit -a
+git push -u origin master
+ls /opt/eclipse/addons/
+ls /opt/eclipse/addons/plugins/
+cd /opt/eclipse/addons/
+rm -rf CHANGELOG.txt features/ LICENSE.txt plugins/ README.txt 
+ls vwrapper/
+unzip -l ~/downloads/vrapper_0.14.0_20100412 
+unzip ~/downloads/vrapper_0.14.0_20100412  -d vrapper
+rm -rf vwrapper/
+unzip ~/downloads/eclemma-1.5.3.zip  -d eclemma-1.5.3
+ls /opt/sapjvm_6/
+ls /opt/sapjvm_6/sapjvm_6/
+ls /opt/sapjvm_6/sapjvm_6/bin/
+sudo ls /opt/sapjvm_6/sapjvm_6/bin/
+sudo ls /opt/sapjvm_6/sapjvm_6/jre/
+sudo ls -lR /opt/sapjvm_6/sapjvm_6/jre/
+find /opt/sapjvm_6/sapjvm_6/jre/ -type f
+sudo find /opt/sapjvm_6/sapjvm_6/jre/ -type f
+sudo find /opt/sapjvm_6/sapjvm_6/ -type f
+ls -l /opt/sapjvm_6/jre/bin/
+sudo find /opt/sapjvm_6/ -type f
+cd ~/downloads/
+wget http://10.66.177.3:8000/sapjvm_6.zip
+rm sapjvm_6.zip 
+wget --no-proxy http://10.66.177.3:8000/sapjvm_6.zip
+ps -ef | grep cp
+rm -rf /opt/sapjvm_6/
+sudo rm -rf /opt/sapjvm_6/
+sudo unzip sapjvm_6.zip -d /opt/
+chgrp -h
+chgrp --help
+chgrp -R wheel /opt/sapjvm_6/
+sudo chgrp -R wheel /opt/sapjvm_6/
+ls /opt/sapjvm_6/bin/
+ls /opt/sapjvm_6/bin/java
+ls -l /opt/sapjvm_6/bin/java
+cd /opt/sapjvm_6/
+chmod -R +x bin/
+sudo chmod -R +x bin/
+ls bin/
+bin/java
+groups
+cd ~/dev
+cd cxf/
+cd common/
+less common/src/main/resources/schemas/configuration/cxf-beans.xsd 
+cd ..
+cd rt
+ls
+less core/src/main/resources/META-INF/cxf/cxf.xml 
+find . -iname '*.xjb'
+less ./databinding/jaxb/src/main/resources/org/apache/cxf/endpoint/dynamic/simple-binding.xjb
+less ./bindings/xml/src/main/resources/schemas/wsdl/xml-binding.xjb
+find . -iname '*.xjb' | xargs vim
+lsdfasdfkiess ./databinding/jaxb/src/main/resources/org/apache/cxf/endpoint/dynamic/simple-binding.xjb
+asdfasdf
+asdf
+exit
+asdfasdf
+asdf
+cd/home/i034796/dev/esb-performance-tests/cxf-rmstores.test 
+cd /home/i034796/dev/esb-performance-tests/cxf-rmstores.test 
+cd ./dev/esb-performance-tests/cxf.rmstores.test/
+pwd
+ls
+exit

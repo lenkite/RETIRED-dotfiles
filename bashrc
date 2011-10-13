@@ -219,7 +219,11 @@ function mark() {
      echo Usage: mark cdargs-bookmark-name
      return 2
    fi
-   cdargs --add=:$1:` cygpath -u -a .`
+   if [[ $OSTYPE = "cygwin" ]]; then
+       cdargs --add=:$1:` cygpath -u -a .`
+   else
+       cdargs --add=:$1:` pwd`
+   fi
 }
  
 # Create a bookmarks in cdargs for the current directory.
@@ -275,7 +279,11 @@ export HISTCONTROL="erasedups:ignoreboth"
 export HISTFILESIZE=500000
 export HISTSIZE=100000
 # multi-line commands to the history as one command.
+#an interactive shell exits, the last $HISTSIZE lines are copied from the history list to the file named by $HISTFILE. If the histappend shell option is set (see section 4.2 Bash Builtin Commands), the lines are appended to the history file, otherwise the history file is overwritten. If HISTFILE is unset, or if the history file is unwritable, the history is not saved. After saving the history, the history file is truncated to contain no more than $HISTFILESIZE lines. If HISTFILESIZE is not set, no truncation is performed.
 shopt -s cmdhist
+shopt -s histappend
+
+
 
 #Cause I don't have the CA certs on cygwin.
 #TODO: find a way to make this possible
