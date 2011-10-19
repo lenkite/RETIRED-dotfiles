@@ -1382,3 +1382,38 @@ cd ./dev/esb-performance-tests/cxf.rmstores.test/
 pwd
 ls
 exit
+cd esb-application/com.sap.esb.application/
+find . -iname 'beans.xml'
+cd master/examples/camel.examples.bsn.corporate/
+find . -iname 'beans.xml' | xargs vim
+asdf
+mount c: /c
+cd /c/temp3
+mv index.html index1.html
+cd ~/dev/arch/
+ls
+rm bank_*
+cd ~/dotfiles/
+rm bash_history 
+git pull
+cat .bash_history 
+ls -al .bash_history 
+ls -al
+less bashrc 
+. ~/.bashrc
+cd ..
+gv /cygdrive/c/Users/i034796/dotfiles/bashrc
+. ~/.bashrc
+gv dotfiles/bashrc
+`cygpath -aw "*"`
+ls `cygpath -aw "*"`
+ls `cygpath -aw "\*"`
+ls `cygpath -aw '*'`
+ls -al
+whoami
+cd dotfiles/
+vi vimrc 
+ls
+git status
+. ~/.bashrc
+git add bash_history bashrc

@@ -267,6 +267,7 @@ function proxyclear() {
     unset https_proxy
 }
 
+
 if [[ $USERDOMAIN == SAP_ALL ]]; then
     proxyset
 fi
@@ -278,6 +279,7 @@ shopt -s extglob
 export HISTCONTROL="erasedups:ignoreboth"
 export HISTFILESIZE=500000
 export HISTSIZE=100000
+export PROMPT_COMMAND='history -a'
 # multi-line commands to the history as one command.
 #an interactive shell exits, the last $HISTSIZE lines are copied from the history list to the file named by $HISTFILE. If the histappend shell option is set (see section 4.2 Bash Builtin Commands), the lines are appended to the history file, otherwise the history file is overwritten. If HISTFILE is unset, or if the history file is unwritable, the history is not saved. After saving the history, the history file is truncated to contain no more than $HISTFILESIZE lines. If HISTFILESIZE is not set, no truncation is performed.
 shopt -s cmdhist
