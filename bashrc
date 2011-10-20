@@ -277,3 +277,12 @@ bind Space:magic-space
 stty stop ''
 
 
+# Mounts
+if [[ $OS = Windows* ]]; then
+    if [[ -d /cygdrive/c ]]; then
+        mount c: /c 2> /dev/null
+    fi
+    if [[ -d /cygdrive/d ]]; then
+        mount d: /d 2> /dev/null
+    fi
+fi

@@ -1571,3 +1571,10 @@ gitenv-hub
 git commit -m
 git commit -a
 git add env
+git commit -a --amend
+git push -u origin master
+echo $OS
+man exists
+mount d: /d 2> /dev/null
+ls /d
+git status
