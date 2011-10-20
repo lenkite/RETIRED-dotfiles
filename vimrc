@@ -6,6 +6,24 @@
 " }
 
 
+" Sets how many lines of history VIM has to remember
+set history=700
+set incsearch
+set hlsearch "Highlight search things
+
+" Set 7 lines to the curors - when moving vertical..
+set so=7
+set smartcase
+set nolazyredraw "Don't redraw while executing macros 
+set magic "Set magic on, for regular expressions
+
+set showmatch "Show matching bracets when text indicator is over them
+set mat=2 "How many tenths of a second to blink
+
+
+" When vimrc is edited, reload it
+autocmd! bufwritepost vimrc source ~/dotfiles/vimrc
+
 
 
 "Buffer management tipcs from
@@ -122,6 +140,7 @@ let g:netrw_liststyle=3
 "Make sure that your .bashrc as stty stop ''
 "or your terminal will hang with C-s and you'll need to resume with C-q
 map <C-s> :w<CR>
+nmap <leader>w :w!<cr>
 imap <C-s> <Esc>:w<CR>i
 
 

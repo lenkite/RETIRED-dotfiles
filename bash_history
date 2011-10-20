@@ -1417,3 +1417,157 @@ ls
 git status
 . ~/.bashrc
 git add bash_history bashrc
+exit
+cd dev
+ls
+mkdir learn
+cd learn/
+mkdir swteclipse
+cd swteclipse/
+pwd
+cd ..
+rmdir swteclipse/
+ls -al
+mkdir graphs
+cd ~/dotfiles/
+git pull
+. ~/.bashrc
+a
+gitenv-hub
+cd ~
+ls
+cd dev/
+ls
+rm -rf learn/
+cd lear
+mkdir learn
+ls
+cd learn/
+git init
+touch README
+vim README 
+ls ~
+cygpath -aw ~
+cd ~/dotfiles/
+./visetup.sh 
+vim
+cd ~/dev/learn/
+ls -al
+cat README 
+git add README
+git commit -m "first commit"
+git push -u origin master
+git remote add origin git@github.com:lenkite/learn.git
+man git push
+man git-push
+ls
+git push -u origin master
+ls
+mkdir graphs
+cd graphs/
+cd graphs
+mkdir javalibs
+cd javalibs/
+cd ..
+rmdir javalibs/
+ls
+mkdir playjavalibs
+cd playjavalibs/
+tempfile -d
+mktemp -d
+cygpath -aw /tmp
+wget --help
+wget --help | grep dir
+mvn --help
+mvn
+ls /c/sdk
+ls /c
+mount c: /c
+ls /c
+ls /c/sdk/eclipse/
+ls /c/sdk/eclipse/SDK-3.7.1-win32-x86_64/
+python
+ls
+cd ~/dev/learn/graphs/playjavalibs/
+cd ../
+mv playjavalibs/ javagraphlibs
+cd javagraphlibs/
+ls
+ls ls ..
+ls ..
+mktemp -d
+wget --help
+wget --help 
+wget --help  
+wget --help  | grep continue
+chmod +x grablibs.sh 
+./grablibs.sh 
+ls /var/temp
+ls /temp
+mktemp -d
+ls /tmp
+rm -rf /tmp/*
+ls -al
+. ~/dotfiles/env 
+vi grablibs.sh
+ls
+ls .
+ls -al
+cd ../javagraphlibs/
+ll
+l
+ll
+ls -l
+alias
+la
+ls
+ll
+ls -al
+lt
+ls -t
+ls -lt
+lsl
+shpt -s expand_aliases
+shopt -s expand_aliases
+l grablibs.sh 
+ll
+ls -al | less
+ls -al | more
+ls /c/
+ls -al /c
+ls -al /c | more
+ls -al /c/Program\ Files/
+mount d: /d
+ls /d
+ls /d/downloads/
+. ~/dotfiles/env 
+ll /d/downloads/
+. ~/dotfiles/bash_aliases 
+ll /d/downloads/
+. ~/dotfiles/bash_aliases 
+ll /d/downloads/
+ll
+ll /c/
+which more
+ll /d/downloads/
+mount d: /d
+l /d/downloads/
+ll /d/downloads/
+which more
+man more
+ll /d/downloads/
+. ~/dotfiles/bash_aliases 
+llt
+llm
+ll
+llt /d/downloads/
+llt /d/downloads/ | less
+ll /d/downloads/ | less
+ls pwd
+cd ~/dotfiles/
+ll
+git status
+gitenv-hub 
+git commit -m
+git commit -a
+git add env
