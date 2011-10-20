@@ -1,0 +1,4 @@
+.classpath
+.settings
+# The below is for ignoring target directory of maven builds but might backfire...
+target/**/*

@@ -21,6 +21,7 @@ mklink %home%\.inputrc %dotdir%\inputrc
 mklink %home%\.bash_profile %dotdir%\bash_profile
 mklink %home%\.bashrc %dotdir%\bashrc
 mklink %home%\.minttyrc %dotdir%\.minttyrc
+mklink %home%\.gitignore %dotdir%\gitignore
 
 REM SymLink for Scite
 mklink %home%\SciTEUser.properties %dotdir%\SciTEUser.properties

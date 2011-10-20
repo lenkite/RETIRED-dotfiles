@@ -1578,3 +1578,9 @@ man exists
 mount d: /d 2> /dev/null
 ls /d
 git status
+git commit -a
+git push -u origin master
+ls /c/sdk/apache/maven/3.0.3/bin/
+mvn
+/c/sdk/apache/maven/3.0.3/bin/mvn
+which java
