@@ -39,3 +39,4 @@ alias pw='cygpath -aw'
 
 alias sshl1="ssh root@10.66.189.121"
 alias mvne="mvn eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true"
+alias m3='C:\sdk\apache\maven\3.0.3'

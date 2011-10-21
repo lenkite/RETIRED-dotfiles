@@ -1417,3 +1417,65 @@ ls
 git status
 . ~/.bashrc
 git add bash_history bashrc
+git commit -a
+git push -u origin master
+cd ~
+ls -al
+cd ~/dev/esb-performance-tests/
+cd ~/dev
+ls -al
+rm -rf esb-application-services/
+git clone git://git.wdf.sap.corp/sandbox/PING/esb-application-services.git
+cd esb-application-services/
+l com.sap.esb.application.services/master/
+less com.sap.esb.application.services/master/examples/ds.hanadb.example/pom.xml 
+less com.sap.esb.application.services/master/examples/pom.xml 
+ping ping-nexus.dhcp.wdf.sap.corp
+cd ~/dev/
+ls
+git clone https://lenkite@github.com/lenkite/learn.git
+hazED27Pine
+git clone git@github.com:lenkite/learn.git
+git clone ssh://git@github.com:lenkite/learn.git
+git clone http://lenkite@github.com/lenkite/learn.git
+git clone https://github.com/lenkite/learn.git
+cd learn/
+ls -al
+mkdir javalib
+rmdir javalib/
+mkdir graph
+cd graph/
+ls -al
+echo $JAVA_HOME
+find /cygdrive/c/Users/i034796/.m2/repository/ -iname '*bsn*jar'
+/c/sdk/apache/maven/3.0.3/bin/mvn --help
+export M2_HOME=/c/sdk/apache/maven/3.0.3
+/c/sdk/apache/maven/3.0.3/bin/mvn --help
+ping ping-hudson.dhcp.wdf.sap.corp
+ssh 10.68.42.62 
+ls -al
+cd ../esb-application
+git pull
+which mvn
+cd ..
+ls
+l
+mkdir scratch
+cd scratch/
+mvn archetype:generate
+export M2_HOME=/c/sdk/apache/maven/3.0.3
+/c/sdk/apache/maven/3.0.3/bin/mvn archetype:generate
+proxyset 
+/c/sdk/apache/maven/3.0.3/bin/mvn --help
+/c/sdk/apache/maven/3.0.3/bin/mvn -s ~/.m2/design_time_settings.xml archetype:generate
+/c/sdk/apache/maven/3.0.3/bin/mvn -s `cygpath -aw ~/.m2/design_time_settings.xm`l archetype:generate
+clear
+grep -Ri PS1 ~/dotfiles/
+echo $PS1
+echo "'$PS1'"
+vi /cygdrive/c/Users/i034796/dotfiles/bashrc 
+cd ~/dotfiles/
+git pull
+git merge
+git pull --help
+git pull -f
