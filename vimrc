@@ -134,6 +134,7 @@ if has("gui_running")
   endif
 endif
 
+
 "netrw plugin config
 let g:netrw_liststyle=3
 
@@ -143,6 +144,10 @@ map <C-s> :w<CR>
 nmap <leader>w :w!<cr>
 imap <C-s> <Esc>:w<CR>i
 
+
+if $GOROOT != ""
+    set rtp+=$GOROOT/misc/vim
+endif
 
 "Call Pathogen {
 filetype off
