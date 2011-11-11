@@ -42,24 +42,7 @@
 #Any completions you add in ~/.bash_completion are sourced last.
 [[ -f /etc/bash_completion ]] && . /etc/bash_completion
 
-# History Options
-#
-# Don't put duplicate lines in the history.
-export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
-export HISTFILE=~/dotfiles/bash_history
-#
-# Ignore some controlling instructions
-# HISTIGNORE is a colon-delimited list of patterns which should be excluded.
-# The '&' is a special pattern which suppresses duplicate entries.
-# export HISTIGNORE=$'[ \t]*:&:[fb]g:exit'
-# export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
-#
-# Whenever displaying the prompt, write the previous line to disk
-# export PROMPT_COMMAND="history -a"
 
-# Aliases
-#
-# Some people use a different file for aliases
 
 if [[ $OS = Windows* ]]; then
     progfiles="`cygpath -au 'c:\Program Files (x86)'`"
@@ -73,21 +56,7 @@ fi
 if [[ -f /etc/profile.d/wcd.sh ]]; then
     source /etc/profile.d/wcd.sh
 fi
-#
-# Some example alias instructions
-# If these are enabled they will be used instead of any instructions
-# they may mask.  For example, alias rm='rm -i' will mask the rm
-# application.  To override the alias instruction use a \ before, ie
-# \rm will call the real rm not the alias.
-#
-# Interactive operation...
-# alias rm='rm -i'
-# alias cp='cp -i'
-# alias mv='mv -i'
-#
-# Default to human readable figures
-alias df='df -h'
-alias du='du -h'
+
 #
 # Umask
 #
@@ -104,6 +73,11 @@ alias du='du -h'
 #   source "${HOME}/.bash_functions"
 # fi
 #
+
+if [[ -f "~/dotfiles/env" ]]; then
+    source "~/dotfiles/env"
+fi
+
 # Some example functions:
 #
 # a) function settitle
@@ -184,6 +158,7 @@ cd_func ()
 
 	return 0
 }
+alias cd=cd_func
 
 
 expl() {
@@ -271,25 +246,15 @@ function proxyclear() {
 if [[ $USERDOMAIN == SAP_ALL ]]; then
     proxyset
 fi
-alias cd=cd_func
 
 # Make bash append rather than overwrite the history on disk
 shopt -s histappend
 shopt -s extglob
-export HISTCONTROL="erasedups:ignoreboth"
-export HISTFILESIZE=500000
-export HISTSIZE=100000
-export PROMPT_COMMAND='history -a'
-# multi-line commands to the history as one command.
-#an interactive shell exits, the last $HISTSIZE lines are copied from the history list to the file named by $HISTFILE. If the histappend shell option is set (see section 4.2 Bash Builtin Commands), the lines are appended to the history file, otherwise the history file is overwritten. If HISTFILE is unset, or if the history file is unwritable, the history is not saved. After saving the history, the history file is truncated to contain no more than $HISTFILESIZE lines. If HISTFILESIZE is not set, no truncation is performed.
 shopt -s cmdhist
 shopt -s histappend
 
 
 
-#Cause I don't have the CA certs on cygwin.
-#TODO: find a way to make this possible
-export GIT_SSL_NO_VERIFY=true
 
 #Solarized color scheme
 #if [[ -e ~/dotfiles/sol.light ]]; then
@@ -312,3 +277,12 @@ bind Space:magic-space
 #stty stop ''
 
 
+# Mounts
+if [[ $OS = Windows* ]]; then
+    if [[ -d /cygdrive/c ]]; then
+        mount c: /c 2> /dev/null
+    fi
+    if [[ -d /cygdrive/d ]]; then
+        mount d: /d 2> /dev/null
+    fi
+fi

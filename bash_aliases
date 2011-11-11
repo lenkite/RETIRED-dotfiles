@@ -1,5 +1,8 @@
 # Aliases go into this file
 
+# Default to human readable figures
+alias df='df -h'
+alias du='du -h'
 # -v	Causes dirs to print the directory stack with one entry per 
 #	line, prefixing each entry with its index in the stack.
 alias dirs='dirs -v'
@@ -20,6 +23,8 @@ alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
 alias la='ls -A'                              # all but . and ..
 alias l='ls -CF'                              #
+alias ll='ls -al'
+alias llt='ls -F -alt'
 alias pw='cygpath -aw'
 # Misc :)
 # alias less='less -r'                          # raw control characters
