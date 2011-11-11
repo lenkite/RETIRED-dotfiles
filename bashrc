@@ -309,6 +309,6 @@ fi
 bind Space:magic-space
 
 #CTRL-s no longer freezes terminal
-stty stop ''
+#stty stop ''
 
 

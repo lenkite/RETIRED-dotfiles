@@ -1,22 +1,16 @@
 BoldAsFont=no
 Font=Consolas
 FontHeight=11
-
-# INFO: http://mintty.googlecode.com/svn/trunk/docs/mintty.1.html#HEAD
-Transparency=2
-OpaqueWhenFocused=1
-FontHeight=11
-BoldAsColour=1
+Transparency=medium
+OpaqueWhenFocused=yes
+BoldAsColour=yes
 Columns=100
 Rows=40
-# Note: you need xterm-256color
 Term=xterm-256color
-CursorType=1
-
-# Zenburn scheme - Source: http://slinky.imukuppi.org/zenburnpage/
+CursorType=underscore
 CursorColour=191,191,191
-ForegroundColour=220,220,204
-BackgroundColour=63,63,63
+ForegroundColour=0,0,0
+BackgroundColour=255,255,255
 Black=63,63,63
 Red=112,80,80
 Green=96,180,138
