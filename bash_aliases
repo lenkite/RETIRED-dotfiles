@@ -13,6 +13,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
+alias tags='ctags -R --extra=+fq --fields=+ailmnSz .'
 
 alias ls='ls -F --color=auto'
 # list dirs only
