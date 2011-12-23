@@ -74,8 +74,8 @@ fi
 # fi
 #
 
-if [[ -f "~/dotfiles/env" ]]; then
-    source "~/dotfiles/env"
+if [[ -f "${HOME}/dotfiles/env" ]]; then
+    source "${HOME}/dotfiles/env"
 fi
 
 # Some example functions:

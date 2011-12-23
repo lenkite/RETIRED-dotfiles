@@ -23,4 +23,5 @@ export PROMPT_COMMAND='history -a'
 #TODO: find a way to make this possible
 export GIT_SSL_NO_VERIFY=true
 
+
 export mvn3=/c/sdk/apache/maven/3.0.3
