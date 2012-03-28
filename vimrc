@@ -60,6 +60,11 @@ map <C-K> <C-W>k<C-W>_
 map <C-H> <C-W>h<C-W>_
 map <C-L> <C-W>l<C-W>_
 
+" remap j and k to scroll by visual lines
+nnoremap j gj
+nnoremap k gk
+
+
 "Show linenumbers flip-flop
 :map <F12> :set number!<CR><Esc>       
 

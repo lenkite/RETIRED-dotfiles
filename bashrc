@@ -178,6 +178,17 @@ spdf() {
     fi
 }
 
+wdiff() {
+    # C:\Program Files (x86)\WinMerge
+    if [[ $# -lt 2 ]]; then
+        echo "Usage: wdiff <file1> <file2>"
+    else
+        f1=`cygpath -aw  "$1"`
+        f2=`cygpath -aw  "$2"`
+        "$progfiles/WinMerge/WinMergeU.exe" "$f1" "$f2"
+    fi
+}
+
 scite() {
     if [[ -z "$1" ]];then
         echo "Usage: scite <filePath>"
@@ -286,3 +297,23 @@ if [[ $OS = Windows* ]]; then
         mount d: /d 2> /dev/null
     fi
 fi
+
+#Setup SSH Agent
+export SSH_AUTH_SOCK=/tmp/.ssh-socket
+#Copied from: http://www.webweavertech.com/ovidiu/weblog/archives/000326.html
+ssh-add -l 2>&1 >/dev/null
+
+if [ $? = 2 ]; then
+    # Exit status 2 means couldn't connect to ssh-agent; start one now
+    ssh-agent -a $SSH_AUTH_SOCK >/tmp/.ssh-script
+    . /tmp/.ssh-script
+    echo $SSH_AGENT_PID >/tmp/.ssh-agent-pid
+    echo "Run ssh-add once to store your SSH keyphrase securely" 
+fi
+
+
+function kill-agent {
+pid=`cat /tmp/.ssh-agent-pid`
+kill $pid
+}
+
