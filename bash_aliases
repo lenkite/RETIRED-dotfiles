@@ -26,6 +26,8 @@ alias la='ls -A'                              # all but . and ..
 alias l='ls -CF'                              #
 alias ll='ls -al'
 alias llt='ls -F -alt'
+alias +='pushd .'
+alias _='popd'
 alias pw='cygpath -aw'
 # Misc :)
 # alias less='less -r'                          # raw control characters
@@ -46,3 +48,4 @@ alias pw='cygpath -aw'
 alias sshl1="ssh root@10.66.189.121"
 alias mvne="mvn eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true"
 alias m3='C:\sdk\apache\maven\3.0.3'
+alias wgetvm='wget --no-check-certificate --no-proxy'
