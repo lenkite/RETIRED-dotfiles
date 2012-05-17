@@ -1,0 +1,8 @@
+export GIT_AUTHOR_EMAIL="tarun.ramakrishna.elankath@sap.com"
+export GIT_COMMITTER_EMAIL="tarun.ramakrishna.elankath@sap.com"
+export GIT_AUTHOR_NAME="Tarun Ramakrishna Elankath"
+export GIT_COMMITTER_NAME="Tarun Ramakrishna Elankath"
+#Cause I don't have the CA certs on cygwin.
+#TODO: find a way to make this possible
+export GIT_SSL_NO_VERIFY=true
+
