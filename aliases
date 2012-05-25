@@ -27,3 +27,4 @@ alias mvne="mvn eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true"
 alias wgetvm='wget --no-check-certificate --no-proxy'
 alias mmv='noglob zmv -W'
 alias winkill='taskkill /F /IM'
+alias s='screen'

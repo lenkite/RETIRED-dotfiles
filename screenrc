@@ -3,4 +3,15 @@ caption string "%?%F%{= Bk}%? %C%A %D %d-%m-%Y %{= kB} %t%= %?%F%{= Bk}%:%{= wk}
 hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
 startup_message off # Turn off the splash screen
-
+# start two sessions
+screen 
+screen 
+# goto screen 0 and split it
+select 0
+split
+# switch to bottom split and make it 6 lines smaller
+focus
+resize -6
+# select screen 1 to show in bottom split
+select 1
+focus

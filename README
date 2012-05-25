@@ -17,6 +17,7 @@ TIPS
 - You can define mydir=<path> and use cd mydir to jump to mydir. To get automcomplete of named directories you can cd ~my<TAB> and list all your named directories starting with my.
 - Use dirs or dv (alias) to list directories on stack.
 - Type zmv command and see http://www.refining-linux.org/archives/36/ZSH-Gem-1-Programmable-file-renaming/
+- The screen command will have two screens with split windows with bottom one slightly smaller than top
 - See http://unix.stackexchange.com/questions/7453/linux-how-to-split-the-terminal-into-more-than-one-view
 - For screen sessions, Use CTRL-a CTRL-a to toggle and CTRL-a K to kill and CTRL-a \ to kill all 
 - Use CTRL-a a prefix for a nested screen sequence
