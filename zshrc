@@ -1,12 +1,10 @@
+source ~/dotfiles/ttycolors/zenburn.sh
 setopt AUTOCD
 setopt CD_ABLE_VARS
 setopt PUSHD_IGNORE_DUPS AUTOPUSHD
 set -o vi
 if [[ $OS = Windows* ]]; then
     progfiles="`/usr/bin/cygpath -au 'c:\Program Files (x86)'`"
-fi
-if [ -f "${HOME}/dotfiles/aliases" ]; then
-   source "${HOME}/dotfiles/aliases"
 fi
 
 # http://superuser.com/questions/362227/how-to-change-the-title-of-the-mintty-window
@@ -100,12 +98,36 @@ fi
 #bindkeys
 bindkey ' ' magic-space
 
-export PATH="/usr/bin:${PATH}"
 export SHELL='zsh'
 export PS1='%~$ '
 
+# Autoloads
+# http://www.refining-linux.org/archives/36/ZSH-Gem-1-Programmable-file-renaming/
+autoload -U zmv
+
+if [ -f "${HOME}/dotfiles/aliases" ]; then
+   source "${HOME}/dotfiles/aliases"
+fi
+
+cd ~/dotfiles
+
 #Setup SSH Agent
-#Copied from: http://www.webweavertech.com/ovidiu/weblog/archives/000326.html
-ssh-agent >/tmp/.ssh-script
+#http://holdenweb.blogspot.in/2007/12/cygwin-ssh-agent-control.html
+export SSH_AUTH_SOCK=/tmp/.ssh-socket
+
+ssh-add -l >/dev/null 2>&1
+if [ $? = 2 ]; then
+# Exit status 2 means couldn't connect to ssh-agent; start one now
+rm -rf /tmp/.ssh-*
+ssh-agent -a $SSH_AUTH_SOCK >/tmp/.ssh-script
 . /tmp/.ssh-script
+echo $SSH_AGENT_PID >/tmp/.ssh-agent-pid
+fi
+
+
+function kill-agent {
+pid=`cat /tmp/.ssh-agent-pid`
+kill $pid
+}
+
 

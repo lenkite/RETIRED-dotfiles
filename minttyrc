@@ -1,9 +1,16 @@
 BoldAsFont=no
-ForegroundColour=0,0,0
-BackgroundColour=255,255,255
-Transparency=off
 Font=Consolas
+FontHeight=12
+Transparency=medium
+OpaqueWhenFocused=yes
+BoldAsColour=yes
+Rows=40
+Columns=120
+Term=xterm-256color
+Transparency=2
 FontHeight=11
-Columns=104
-Rows=29
-FontSmoothing=full
+# Note: you need xterm-256color
+Term=xterm-256color
+CursorType=1
+# See http://mintty.googlecode.com/svn-history/r1127/trunk/docs/mintty.1.html
+FontQuality=Full

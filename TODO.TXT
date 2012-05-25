@@ -1,0 +1,2 @@
+Mail Honza maintainer of https://github.com/honza/snipmate-snippets to introduce
+head5 snipper since <meta charset="UTF-8" /> is simplified form of meta in HTML5

@@ -28,9 +28,12 @@ mklink %home%\.bashrc %dotdir%\bashrc
 del /q %home%\.zshrc
 mklink %home%\.zshrc %dotdir%\zshrc
 del /q %home%\.minttyrc
-mklink %home%\.minttyrc %dotdir%\.minttyrc
+del /q %home%\minttyrc
+mklink %home%\.minttyrc %dotdir%\minttyrc
 del /q %home%\.gitignore
 REM mklink %home%\.gitignore %dotdir%\gitignore
+del /q %home%\.screenrc
+mklink %home%\.screenrc %dotdir%\screenrc
 
 REM SymLink for Scite
 del /q %home%\SciTEUser.properties
