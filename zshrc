@@ -3,7 +3,7 @@ setopt CD_ABLE_VARS
 setopt PUSHD_IGNORE_DUPS AUTOPUSHD
 set -o vi
 if [[ $OS = Windows* ]]; then
-    progfiles="`cygpath -au 'c:\Program Files (x86)'`"
+    progfiles="`/usr/bin/cygpath -au 'c:\Program Files (x86)'`"
 fi
 if [ -f "${HOME}/dotfiles/aliases" ]; then
    source "${HOME}/dotfiles/aliases"
@@ -96,6 +96,9 @@ if [[ $OS = Windows* ]]; then
         mount d: /d 2> /dev/null
     fi
 fi
+
+#bindkeys
+bindkey ' ' magic-space
 
 export PATH="/usr/bin:${PATH}"
 export SHELL='zsh'

@@ -26,6 +26,7 @@ autocmd! bufwritepost vimrc source ~/dotfiles/vimrc
 
 
 
+
 "Buffer management tipcs from
 "http://vim.wikia.com/wiki/Easier_buffer_switching
 set hidden
@@ -176,3 +177,9 @@ colo zenburn
 " }
 
 
+" Autocmd's for filetypes{
+au FileType xml  setl iskeyword+=-,.
+au FileType less setl iskeyword+=-,.
+au FileType css setl iskeyword+=-,.
+
+"}
