@@ -7,6 +7,8 @@ if [[ $OS = Windows* ]]; then
     progfiles="`/usr/bin/cygpath -au 'c:\Program Files (x86)'`"
 fi
 
+export PATH="/usr/bin:${PATH}"
+
 # http://superuser.com/questions/362227/how-to-change-the-title-of-the-mintty-window
 # Change title of MinTTY to current dir
 function settitle() {

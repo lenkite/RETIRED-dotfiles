@@ -18,7 +18,7 @@ git clone https://github.com/tpope/vim-repeat.git -b master vim/bundle/vim-repea
 git clone https://github.com/garbas/vim-snipmate.git -b master vim/bundle/vim-snipmate
 git clone https://github.com/tomtom/tlib_vim.git -b master vim/bundle/tlib_vim
 git clone https://github.com/MarcWeber/vim-addon-mw-utils.git -b master vim/bundle/vim-addon-mw-utils
-git clone https://github.com/honza/snipmate-snippets.git -b master vim/bundle/snipmate-snippets
+git clone https://github.com/lenkite/snipmate-snippets.git -b master vim/bundle/snipmate-snippets 
 git clone https://github.com/kien/ctrlp.vim.git -b master vim/bundle/ctrlp.vim
 rm -rf mintty/mintty-colors-solarized
 git clone https://github.com/skammer/vim-css-color.git vim/bundle/vim-css-color

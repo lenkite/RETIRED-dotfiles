@@ -9,9 +9,9 @@ screen
 # goto screen 0 and split it
 select 0
 split
-# switch to bottom split and make it 6 lines smaller
+# switch to bottom split and make it 1 line bigger
 focus
-resize -6
+resize +1
 # select screen 1 to show in bottom split
 select 1
 focus
