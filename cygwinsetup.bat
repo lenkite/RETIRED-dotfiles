@@ -19,6 +19,7 @@ setup.exe ^
 astyle,^
 git,^
 git-completion,^
+git-gui,^
 aview,^
 aalib,^
 gitk,^
