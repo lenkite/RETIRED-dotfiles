@@ -1,6 +1,8 @@
 cygwin_install
 http*
 vim/bundle
+vim/bundle/*
+zlibs/github
 setup.exe
 setup.log
 setup.log.full

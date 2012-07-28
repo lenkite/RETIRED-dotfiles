@@ -1,5 +1,5 @@
 SETUP
-- Clone this repository
+- Clone this repository into your home directory - it should be at path ~/dotfiles
 - Disable Antivirus if you prefer speed of installation.
 - Download cygwin 'setup.exe' here.
 - Open DOS Command Prompt and run cygwinsetup.bat
@@ -22,4 +22,5 @@ TIPS
 - For screen sessions, Use CTRL-a CTRL-a to toggle and CTRL-a K to kill and CTRL-a \ to kill all 
 - Use CTRL-a a prefix for a nested screen sequence
 - Use 'winkill' alias on cygwin to kill processes by name. Ex: 'winkill notepad.exe'
+- Use 'z' for AMAZING, intelligent, CD'ing. Read README at https://github.com/rupa/z/
 

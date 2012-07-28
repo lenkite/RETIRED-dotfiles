@@ -113,7 +113,6 @@ if [ -f "${HOME}/dotfiles/aliases" ]; then
    source "${HOME}/dotfiles/aliases"
 fi
 
-cd ~/dotfiles
 
 #Setup SSH Agent
 #http://holdenweb.blogspot.in/2007/12/cygwin-ssh-agent-control.html
@@ -134,4 +133,12 @@ pid=`cat /tmp/.ssh-agent-pid`
 kill $pid
 }
 
-
+#Ok now load some zsh libraries if present
+if [[ -d  ~/dotfiles/zlibs/github/z ]]; then
+    source ~/dotfiles/zlibs/github/z/z.sh
+fi
+function precmd() {
+    #TODO: How to check for function existtence of '_z' ?
+    _z --add "$(pwd -P)"
+}
+cd ~
