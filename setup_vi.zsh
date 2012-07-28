@@ -19,7 +19,7 @@ git clone --depth=1 https://github.com/garbas/vim-snipmate.git -b master vim/bun
 git clone --depth=1 https://github.com/tomtom/tlib_vim.git -b master vim/bundle/tlib_vim
 git clone --depth=1 https://github.com/MarcWeber/vim-addon-mw-utils.git -b master vim/bundle/vim-addon-mw-utils
 git clone --depth=1 https://github.com/kien/ctrlp.vim.git -b master vim/bundle/ctrlp.vim
-git clone --depth=1 https://github.com/mattn/zencoding-vim.git master vim/bundle/zencoding-vim
+git clone --depth=1 https://github.com/mattn/zencoding-vim.git -b master vim/bundle/zencoding-vim
 rm -rf mintty/mintty-colors-solarized
 git clone --depth=1 https://github.com/skammer/vim-css-color.git vim/bundle/vim-css-color
 git clone --depth=1 https://github.com/hail2u/vim-css3-syntax.git vim/bundle/vim-css3-syntax
