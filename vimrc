@@ -47,15 +47,16 @@ set ruler               " show cursor position in status bar
 "See http://vimcasts.org/episodes/soft-wrapping-text/
 command! -nargs=* Wrap set wrap linebreak nolist
 command! -nargs=* Nowrap set nowrap nolinebreak
-if !has("gui")
-    set showbreak=…
-endif
+"if !has("gui")
+"    set showbreak=…
+"endif
 
 
 " From Best of VIM Tipcs at http://www.rayninfo.co.uk/vimtips.html
 
 
 " Quick jumping between splits
+set wmh=0
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 map <C-H> <C-W>h<C-W>_

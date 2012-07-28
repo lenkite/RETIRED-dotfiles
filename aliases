@@ -29,3 +29,4 @@ alias mmv='noglob zmv -W'
 alias winkill='taskkill /F /IM'
 alias msi='mvn -DskipTests install'
 alias s='screen'
+

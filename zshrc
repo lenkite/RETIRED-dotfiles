@@ -2,12 +2,19 @@ source ~/dotfiles/ttycolors/zenburn.sh
 setopt AUTOCD
 setopt CD_ABLE_VARS
 setopt PUSHD_IGNORE_DUPS AUTOPUSHD
+setopt CORRECT
 set -o vi
 if [[ $OS = Windows* ]]; then
     progfiles="`/usr/bin/cygpath -au 'c:\Program Files (x86)'`"
 fi
 
 export PATH="/usr/bin:${PATH}"
+
+# Autoloads
+# http://www.refining-linux.org/archives/36/ZSH-Gem-1-Programmable-file-renaming/
+autoload -U zmv
+#autoload -U compinit #Used for compdef function. See aliases
+#compinit
 
 # http://superuser.com/questions/362227/how-to-change-the-title-of-the-mintty-window
 # Change title of MinTTY to current dir
@@ -56,13 +63,7 @@ scite() {
 }
 
 function proxyset() {
-    if [[ $LOGONSERVER == *BLR* ]]; then
-        export http_proxy="http://proxy.blrl.sap.corp:8080"
-        export https_proxy="http://proxy.blrl.sap.corp:8080"
-    elif [[ $LOGONSERVER == *WDF* ]]; then
-        export http_proxy="http://proxy.wdf.sap.corp:8080"
-        export https_proxy="http://proxy.wdf.sap.corp:8080"
-    fi
+    export http_proxy="http://proxy.blrl.sap.corp:8080"
     if [[ ! -z $http_proxy ]]; then
         echo "Proxy set to $http_proxy"
     fi
@@ -86,6 +87,7 @@ function gitenv-sap() {
 function gitenv-hub() {
    source ~/dotfiles/gitenv-hub
 }
+source ~/dotfiles/git.zsh
 
 # Mounts
 if [[ $OS = Windows* ]]; then
@@ -103,9 +105,6 @@ bindkey ' ' magic-space
 export SHELL='zsh'
 export PS1='%~$ '
 
-# Autoloads
-# http://www.refining-linux.org/archives/36/ZSH-Gem-1-Programmable-file-renaming/
-autoload -U zmv
 
 if [ -f "${HOME}/dotfiles/aliases" ]; then
    source "${HOME}/dotfiles/aliases"

@@ -24,6 +24,8 @@ export HISTFILE=~/.history
 setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
+setopt APPEND_HISTORY INC_APPEND_HISTORY SHARE_HISTORY
+setopt HIST_ALLOW_CLOBBER HIST_REDUCE_BLANKS
 
 #Cause I don't have the CA certs on cygwin.
 #TODO: find a way to make this possible

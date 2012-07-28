@@ -18,12 +18,20 @@ git clone https://github.com/tpope/vim-repeat.git -b master vim/bundle/vim-repea
 git clone https://github.com/garbas/vim-snipmate.git -b master vim/bundle/vim-snipmate
 git clone https://github.com/tomtom/tlib_vim.git -b master vim/bundle/tlib_vim
 git clone https://github.com/MarcWeber/vim-addon-mw-utils.git -b master vim/bundle/vim-addon-mw-utils
-git clone https://github.com/lenkite/snipmate-snippets.git -b master vim/bundle/snipmate-snippets 
 git clone https://github.com/kien/ctrlp.vim.git -b master vim/bundle/ctrlp.vim
+git clone https://github.com/mattn/zencoding-vim.git master vim/bundle/zencoding-vim
 rm -rf mintty/mintty-colors-solarized
 git clone https://github.com/skammer/vim-css-color.git vim/bundle/vim-css-color
 git clone https://github.com/hail2u/vim-css3-syntax.git vim/bundle/vim-css3-syntax
 git clone https://github.com/groenewege/vim-less.git vim/bundle/vim-less
+
+# Snipmate-snippets was formed from honza..add him as upstream
+git clone https://github.com/lenkite/snipmate-snippets.git -b master vim/bundle/snipmate-snippets 
+cd vim/bundle/snipmate-snippets
+git remote add upstream https://github.com/honza/snipmate-snippets.git
+git fetch upstream
+git merge upstream/master
+cd ../../../
 
 #git submodule foreach git submodule init
 #git submodule foreach git submodule update
