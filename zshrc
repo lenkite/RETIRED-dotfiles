@@ -3,6 +3,7 @@ setopt AUTOCD
 setopt CD_ABLE_VARS
 setopt PUSHD_IGNORE_DUPS AUTOPUSHD
 setopt CORRECT
+setopt EXTENDED_GLOB
 set -o vi
 if [[ $OS = Windows* ]]; then
     progfiles="`/usr/bin/cygpath -au 'c:\Program Files (x86)'`"
@@ -13,6 +14,8 @@ export PATH="/usr/bin:${PATH}"
 # Autoloads
 # http://www.refining-linux.org/archives/36/ZSH-Gem-1-Programmable-file-renaming/
 autoload -U zmv
+#autoload -U promptinit
+#promptinit
 #autoload -U compinit #Used for compdef function. See aliases
 #compinit
 
@@ -22,7 +25,7 @@ function settitle() {
     echo -ne "\033]2;"$1"\007"
 }
 function chpwd() {
-    settitle $(cygpath -m `pwd`)
+    settitle $PWD
 }
 
 expl() {
