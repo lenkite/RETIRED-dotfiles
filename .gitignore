@@ -2,7 +2,9 @@ cygwin_install
 http*
 vim/bundle
 vim/bundle/*
-zlibs/github
+vim/autoload/pathogen.vim
+scripts/github
+scripts/ack
 setup.exe
 setup.log
 setup.log.full

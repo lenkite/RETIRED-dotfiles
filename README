@@ -23,4 +23,6 @@ TIPS
 - Use CTRL-a a prefix for a nested screen sequence
 - Use 'winkill' alias on cygwin to kill processes by name. Ex: 'winkill notepad.exe'
 - Use 'z' for AMAZING, intelligent, CD'ing. Read README at https://github.com/rupa/z/
+- Use 'ack' instead of 'grep' to search.
+  See http://stevengharms.com/use-ack-instead-of-grep-to-parse-text-files
 

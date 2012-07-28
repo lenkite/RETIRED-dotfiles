@@ -9,7 +9,7 @@ if [[ $OS = Windows* ]]; then
     progfiles="`/usr/bin/cygpath -au 'c:\Program Files (x86)'`"
 fi
 
-export PATH="/usr/bin:${PATH}"
+export PATH="$HOME/dotfiles/scripts:/usr/bin:${PATH}"
 
 # Autoloads
 # http://www.refining-linux.org/archives/36/ZSH-Gem-1-Programmable-file-renaming/
@@ -123,7 +123,7 @@ if [ $? = 2 ]; then
 # Exit status 2 means couldn't connect to ssh-agent; start one now
 rm -rf /tmp/.ssh-*
 ssh-agent -a $SSH_AUTH_SOCK >/tmp/.ssh-script
-. /tmp/.ssh-script
+source /tmp/.ssh-script
 echo $SSH_AGENT_PID >/tmp/.ssh-agent-pid
 fi
 
@@ -134,11 +134,11 @@ kill $pid
 }
 
 #Ok now load some zsh libraries if present
-if [[ -d  ~/dotfiles/zlibs/github/z ]]; then
-    source ~/dotfiles/zlibs/github/z/z.sh
+if [[ -d  ~/dotfiles/scripts/github/z ]]; then
+    source ~/dotfiles/scripts/github/z/z.sh
 fi
 function precmd() {
     #TODO: How to check for function existtence of '_z' ?
     _z --add "$(pwd -P)"
 }
-cd ~
+cd ~/dotfiles
