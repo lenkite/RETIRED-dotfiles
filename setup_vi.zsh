@@ -25,6 +25,9 @@ git clone --depth=1 https://github.com/skammer/vim-css-color.git vim/bundle/vim-
 git clone --depth=1 https://github.com/hail2u/vim-css3-syntax.git vim/bundle/vim-css3-syntax
 git clone --depth=1 https://github.com/groenewege/vim-less.git vim/bundle/vim-less
 
+#tiled window management for VIM
+git clone --depth=1 https://github.com/spolu/dwm.vim -b master vim/bundle/dwm
+
 # Snipmate-snippets was formed from honza..add him as upstream
 git clone --depth=1 https://github.com/lenkite/snipmate-snippets.git -b master vim/bundle/snipmate-snippets 
 cd vim/bundle/snipmate-snippets
