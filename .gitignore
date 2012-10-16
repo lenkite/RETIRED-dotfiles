@@ -2,6 +2,7 @@ cygwin_install
 http*
 vim/bundle
 vim/bundle/*
+vim/bundle/**
 vim/autoload/pathogen.vim
 scripts/github
 scripts/ack
