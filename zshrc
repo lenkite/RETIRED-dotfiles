@@ -67,6 +67,7 @@ scite() {
 
 function proxyset() {
     export http_proxy="http://proxy.blrl.sap.corp:8080"
+    export https_proxy=$http_proxy
     if [[ ! -z $http_proxy ]]; then
         echo "Proxy set to $http_proxy"
     fi
