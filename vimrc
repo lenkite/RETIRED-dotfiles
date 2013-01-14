@@ -57,10 +57,10 @@ command! -nargs=* Nowrap set nowrap nolinebreak
 
 " Quick jumping between splits
 set wmh=0
-map <C-J> <C-W>j<C-W>
-map <C-K> <C-W>k<C-W>
-map <C-H> <C-W>h<C-W>
-map <C-L> <C-W>l<C-W>
+map <C-J> <C-W><C-j>
+map <C-K> <C-W><C-k>
+map <C-H> <C-W><C-h>
+map <C-L> <C-W><C-l>
 
 " remap j and k to scroll by visual lines
 nnoremap j gj
