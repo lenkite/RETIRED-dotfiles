@@ -7,12 +7,16 @@
 
 
 " Sets how many lines of history VIM has to remember
-set history=700
+set history=1500
+set wildignore=*.swp,*.bak,*.pyc,*.class
 set incsearch
 set hlsearch "Highlight search things
+set visualbell           " don't beep
+set noerrorbells         " don't beep
+
 
 " Set 7 lines to the curors - when moving vertical..
-set so=7
+set so=4
 set smartcase
 set nolazyredraw "Don't redraw while executing macros 
 set magic "Set magic on, for regular expressions
@@ -32,12 +36,25 @@ autocmd! bufwritepost vimrc source ~/dotfiles/vimrc
 set hidden
 set wildcharm=<C-Z>
 nnoremap <F10> :b <C-Z>
+"map <Leader>b :b <C-Tab>
+"only realized later that Ctrl-p offers plain buffer choosing
+map <Leader>b :CtrlPBuffer<CR>
+set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 
+" { Various editing options
 set nobackup
 set nowritebackup
 set noswapfile
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+set backspace=2
+set backspace=indent,eol,start
+
+"http://stackoverflow.com/questions/5419848/backspace-doesnt-work-in-gvim-7-2-64-bit-for-windows
+"}
+"z
+
+
 "http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim?answertab=votes#tab-top
 set showmatch           " show matching bracket (briefly jump)
 set showmode            " show mode in status bar (insert/replace/...)
@@ -57,10 +74,10 @@ command! -nargs=* Nowrap set nowrap nolinebreak
 
 " Quick jumping between splits
 set wmh=0
-map <C-J> <C-W><C-j>
-map <C-K> <C-W><C-k>
-map <C-H> <C-W><C-h>
-map <C-L> <C-W><C-l>
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-H> <C-W>h
+map <C-L> <C-W>l
 
 " remap j and k to scroll by visual lines
 nnoremap j gj
@@ -156,6 +173,19 @@ if $GOROOT != ""
     set rtp+=$GOROOT/misc/vim
 endif
 
+" {
+" Some mappings
+" C-S-B for make
+map <f7> :make<CR>
+nmap <F8> :TagbarToggle<CR>
+"http://stackoverflow.com/questions/9054780/how-to-toggle-vims-search-highlight-visibility-without-disabling-it
+" switch higlight no matter the previous state
+nmap <Leader>h :set hls! <cr>
+" hit '/' highlights then enter search mode
+nnoremap / :set hlsearch<cr>/
+"
+
+" }
 "Call Pathogen {
 filetype off
 call pathogen#infect()
@@ -184,3 +214,4 @@ au FileType less setl iskeyword+=-,.
 au FileType css setl iskeyword+=-,.
 
 "}
+

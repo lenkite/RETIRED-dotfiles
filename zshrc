@@ -138,8 +138,4 @@ kill $pid
 if [[ -d  ~/dotfiles/scripts/github/z ]]; then
     source ~/dotfiles/scripts/github/z/z.sh
 fi
-function precmd() {
-    #TODO: How to check for function existtence of '_z' ?
-    _z --add "$(pwd -P)"
-}
-cd ~/dotfiles
+cd ~
