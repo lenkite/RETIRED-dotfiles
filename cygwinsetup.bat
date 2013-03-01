@@ -1,17 +1,19 @@
 REM See http://cygwin.com/faq/faq.setup.html#faq.setup.cli
 REM See cygwin package list at: http://cygwin.com/packages/
-RD /S /Q cygwin_packges
-RD /S /Q c:\sdk\cygwin
-d /q /s http%3a%2f%2fmirrors.kernel.org%2fsourceware%2fcygwin%2f
+set targetdrive=d:
+set localpkgdir=%targetdrive%\sdk\cygwin_packages
+set installdir=%targetdrive%\sdk\cygwin
+RD /S /Q %localpkgdir%
+RD /S /Q %installdir%
 rm /q setup.log
 rm /q setup.log.full
 rd /q /s http%3a*
-rmdir cygwin_packages
-mkdir c:\sdk\cygwin
+rmdir %localpkgdir%
+mkdir %installdir%
 setup.exe ^
---proxy proxy:8080 ^
 --disable-buggy-antivirus ^
---root c:\sdk\cygwin\ ^
+--local-package-dir %localpkgdir% ^
+--root %installdir% ^
 --quiet-mode ^
 --only-site ^
 --site http://mirrors.kernel.org/sourceware/cygwin/ ^
@@ -184,4 +186,4 @@ xtail,^
 zip,^
 zsync,^
 zsh
-echo After installation go to last line in c:\sdk\cygwin\etc\passwd and change /home/<userid> to /cygdrive/c/Users/<userId>. Also make userId smallcased
+echo After installation go to last line in %installdir%\etc\passwd and change /home/<userid> to /cygdrive/c/Users/<userId>. Also make userId smallcased

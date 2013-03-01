@@ -9,9 +9,12 @@ REM Set necessary env variables
 setx HOME %USERPROFILE%
 setx PATH "%PATH%
 
-set SDKHOME=c:\dev
-if not exist %SDKHOME% set SDKHOME=d:\dev
+set SDKHOME=d:\sdk
+if not exist %SDKHOME% set SDKHOME=d:\sdk
+mkdir %SDKHOME%
+if not exist %SDKHOME% set SDKHOME=c:\sdk
 
+set cyghome=%SDKHOME%\cygwin
 
 echo Dev Home is %DEVHOME%
 
@@ -52,12 +55,12 @@ mklink /d %home%\vimfiles %dotdir%\vim
 rmdir /q %home%\.vim
 mklink /d %home%\.vim %dotdir%\vim
 
-call BatchSubstitute.bat "/home/%USERNAME%" "/cygdrive/c/Users/%USERNAME%" c:\sdk\cygwin\etc\passwd > %TEMP%\passwd1
+call BatchSubstitute.bat "/home/%USERNAME%" "/cygdrive/c/Users/%USERNAME%" %cyghome%\etc\passwd > %TEMP%\passwd1
 call BatchSubstitute.bat "/bin/bash" "/bin/zsh" %TEMP%\passwd1 > %TEMP%\passwd2
-copy %TEMP%\passwd2 c:\sdk\cygwin\etc\passwd
+copy %TEMP%\passwd2 %cyghome%\etc\passwd
 
 icacls vim /setowner %USERNAME%
 icacls . /grant %USERNAME%:F
 
-icacls c:\sdk\cygwin\etc\passwd /setowner %USERNAME%
-icacls c:\sdk\cygwin\etc\passwd  /grant %USERNAME%:F
+icacls %cyghome%\etc\passwd /setowner %USERNAME%
+icacls %cyghome%\etc\passwd  /grant %USERNAME%:F
