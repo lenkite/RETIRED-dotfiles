@@ -24,10 +24,14 @@ alias ll='ls -al'
 alias llt='ls -F -alt'
 alias pw='cygpath -aw'
 alias mvne="mvn eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true"
+alias mvnc="mvn clean"
+alias nsumvne="mvn -nsu eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true"
 alias wgetvm='wget --no-check-certificate --no-proxy'
 alias mmv='noglob zmv -W'
 alias winkill='taskkill /F /IM'
 alias msi='mvn -DskipTests install'
+alias nsumsi='mvn -nsu -DskipTests install'
 alias s='screen'
 alias animal="curl -s 'http://animals.ivolo.me/?index=8'"
 alias moving_animal='curl -s https://raw.github.com/ivolo/animals/master/examples/loading.sh | sh'
+alias mvn='mvn'

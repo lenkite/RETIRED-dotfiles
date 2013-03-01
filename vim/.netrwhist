@@ -1,9 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/c/Users/i034796/dotfiles/mintty'
-let g:netrw_dirhist_2='C:/dev/ava/git/gizmos/diagtribes'
-let g:netrw_dirhist_3='c:/sdk/jpaas/neo-131/tools/bin'
-let g:netrw_dirhist_4='C:/dev/ava/git/gizmos/mcastdiag'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='C:/dev/learn/c/basic'
+let g:netrw_dirhist_2='C:\dev\learn\c\basic'
+let g:netrw_dirhist_3='C:/Users/i034796/dotfiles'
+let g:netrw_dirhist_4='C:\Users\i034796\dotfiles'
 let g:netrw_dirhist_5='C:/Users/i034796/dotfiles'
-let g:netrw_dirhist_6='C:/dev/ava/git/gizmos/command.client.t7'
-let g:netrw_dirhist_7='C:/dev/ava/git/gizmos/hotdeploy.tool'

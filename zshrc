@@ -67,6 +67,7 @@ scite() {
 
 function proxyset() {
     export http_proxy="http://proxy.blrl.sap.corp:8080"
+    export https_proxy=$http_proxy
     if [[ ! -z $http_proxy ]]; then
         echo "Proxy set to $http_proxy"
     fi
@@ -137,8 +138,4 @@ kill $pid
 if [[ -d  ~/dotfiles/scripts/github/z ]]; then
     source ~/dotfiles/scripts/github/z/z.sh
 fi
-function precmd() {
-    #TODO: How to check for function existtence of '_z' ?
-    _z --add "$(pwd -P)"
-}
-cd ~/dotfiles
+cd ~
