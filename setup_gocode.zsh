@@ -17,6 +17,13 @@ function get_vim_gocode() {
         mkdir $plugin_dir
     fi
     mv $TMP/gocode-master/vim/* $plugin_dir
+    if [[ ! -z "$GOROOT" ]]; then
+        echo "Installing gocode..."
+        go get -u github.com/nsf/gocode
+        echo "gocode installed."
+    else
+        echo "Please install go and set GOROOT"
+    fi
 
 }
 
