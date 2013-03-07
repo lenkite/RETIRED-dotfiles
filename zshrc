@@ -79,7 +79,12 @@ function proxyclear() {
 }
 
 
-if [[ $USERDOMAIN == SAP_ALL ]]; then
+#Figure out whether I should set proxy or not.
+#I don't think this works when I am connected remotely...
+myip=`ipconfig | grep -i 'IPv4 Address' | cut -d:  -f2`
+myip=`echo $myip| tr -d '[[:space:]]'`
+if [[ "$myip" != 192.168.1* ]]; then
+    echo "yo"
     proxyset
 fi
 
