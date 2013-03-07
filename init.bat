@@ -9,7 +9,7 @@ REM Set necessary env variables
 setx HOME %USERPROFILE%
 setx PATH "%PATH%
 
-set SDKHOME=d:\sdk
+set SDKHOME=c:\sdk
 if not exist %SDKHOME% set SDKHOME=d:\sdk
 mkdir %SDKHOME%
 if not exist %SDKHOME% set SDKHOME=c:\sdk

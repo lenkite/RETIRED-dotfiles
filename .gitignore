@@ -1,5 +1,6 @@
 cygwin_install
 http*
+bash_history
 vim/bundle
 vim/bundle/*
 vim/bundle/**

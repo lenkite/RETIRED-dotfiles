@@ -136,6 +136,6 @@ kill $pid
 
 #Ok now load some zsh libraries if present
 if [[ -d  ~/dotfiles/scripts/github/z ]]; then
-    source ~/dotfiles/scripts/github/z/z.sh
+    . ~/dotfiles/scripts/github/z/z.sh
 fi
 cd ~

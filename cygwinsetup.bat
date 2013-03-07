@@ -1,6 +1,6 @@
 REM See http://cygwin.com/faq/faq.setup.html#faq.setup.cli
 REM See cygwin package list at: http://cygwin.com/packages/
-set targetdrive=d:
+set targetdrive=c:
 set localpkgdir=%targetdrive%\sdk\cygwin_packages
 set installdir=%targetdrive%\sdk\cygwin
 RD /S /Q %localpkgdir%
