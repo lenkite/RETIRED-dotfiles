@@ -12,6 +12,7 @@ rmdir %localpkgdir%
 mkdir %installdir%
 setup.exe ^
 --disable-buggy-antivirus ^
+--proxy proxy.wdf.sap.corp:8080 ^
 --local-package-dir %localpkgdir% ^
 --root %installdir% ^
 --quiet-mode ^
