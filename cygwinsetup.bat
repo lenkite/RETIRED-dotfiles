@@ -18,13 +18,24 @@ goto check_Permissions
     )
 
 echo **Ensure that you are running with Administrator privilege
-if not defined targetdrive (
-    choice /c:CDE /M "Enter cygwin/tools install drive: "
-    if  !ERRORLEVEL! == 3 goto :edrive
-    echo errorlevel=%ERRORLEVEL%
-    set el=!ERRORLEVEL!
-    echo errorlevel = %el%
-)
+choice /c:CDE /M "Enter cygwin/tools install drive: "
+if  ERRORLEVEL 3 goto :edrive
+if  ERRORLEVEL 2 goto :ddrive
+if  ERRORLEVEL 1 goto :cdrive
+:edrive
+echo Target drive is E:
+set targetdrive=E:
+goto :proxy
+:ddrive
+echo Target drive is D:
+set targetdrive=D:
+goto :proxy
+:cdrive
+echo Target drive is C:
+set targetdrive=C:
+goto :proxy
+
+:proxy
 echo Target install drive is %targetdrive%
 
 if not defined http_proxy (
@@ -43,6 +54,7 @@ taskkill /t /f /im  bash.exe  2>nul
 taskkill /t /f /im  zsh.exe  2>nul
 taskkill /t /f /im  vim.exe  2>nul
 taskkill /t /f /im  sublime_text.exe  2>nul
+taskkill /t /f /im  git-credential-cache--daemon.exe   2>nul
 
 :sethomesdkvars
 set SDKHOME=%targetdrive%\sdk
