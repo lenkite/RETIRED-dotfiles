@@ -1,0 +1,22 @@
+
+** 2013-07-08 15:41:10.561368 **:
+MarGo: Cannot load env vars: Decode Error: No JSON object could be decoded
+env output: '"gosublime.margo.r13.04.24-1.windows-x64.exe -env"' is not recognized as an internal or external command,
+operable program or batch file.
+--------------------------------
+
+** 2013-07-08 15:41:10.626374 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+
+** 2013-07-11 15:05:31.722677 **:
+MarGo: Cannot load env vars: Decode Error: No JSON object could be decoded
+env output: '"gosublime.margo.r13.04.24-1.windows-x64.exe -env"' is not recognized as an internal or external command,
+operable program or batch file.
+--------------------------------
+
+** 2013-07-11 15:05:31.739679 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------

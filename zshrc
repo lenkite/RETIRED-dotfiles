@@ -84,7 +84,6 @@ function proxyclear() {
 myip=`ipconfig | grep -i 'IPv4 Address' | cut -d:  -f2`
 myip=`echo $myip| tr -d '[[:space:]]'`
 if [[ "$myip" != 192.168.1* ]]; then
-    echo "yo"
     proxyset
 fi
 

@@ -1,3 +1,10 @@
+" Source SPF vimrc {
+" vim: set foldmarker={,} foldlevel=0 foldmethod=marker:
+"
+"source ~\dotfiles\spf13.vimrc
+"}
+
+
 " Modeline and Notes {
 " vim: set foldmarker={,} foldlevel=0 foldmethod=marker:
 "   Tarun Ramakrishna Elankath's vimrc file. Been using VIM for 8 years now. 
@@ -187,18 +194,18 @@ nnoremap / :set hlsearch<cr>/
 
 " }
 "Call Pathogen {
-filetype off
-call pathogen#infect()
-call pathogen#helptags()
-syntax on
-filetype plugin indent on
+"filetype off
+"call pathogen#infect()
+"call pathogen#helptags()
+"syntax on
+"filetype plugin indent on
 "}
 
 " UI Related {
 "http://vim.wikia.com/wiki/Great_wildmode/wildmenu_and_console_mouse
 set wildmenu
 set wildmode=list:longest,full
-colo zenburn
+"colo zenburn
 " visual searching
 :vmap // y/<C-R>"<CR>     "search for visually highlighted text  
 " Pull word under cursor into LHS of a substitute

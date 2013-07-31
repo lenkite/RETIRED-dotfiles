@@ -1,0 +1,7 @@
+Bundle 'spf13/vim-colors'
+Bundle 'flazz/vim-colorschemes'
+Bundle 'groenewege/vim-less'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'skammer/vim-css-color'
+Bundle 'vim-scripts/CRefVim'
+Bundle 'vim-scripts/ZoomWin'
