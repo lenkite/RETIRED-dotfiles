@@ -20,3 +20,47 @@ operable program or batch file.
 MarGo: Missing required environment variables: GOPATH
 See the `Quirks` section of USAGE.md for info
 --------------------------------
+
+** 2013-07-31 15:34:52.351698 **:
+MarGo: Cannot load env vars: Decode Error: No JSON object could be decoded
+env output: '"gosublime.margo.r13.04.24-1.windows-x64.exe -env"' is not recognized as an internal or external command,
+operable program or batch file.
+--------------------------------
+
+** 2013-07-31 15:34:52.364699 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+
+** 2013-07-31 19:48:28.904234 **:
+MarGo: Cannot load env vars: Decode Error: No JSON object could be decoded
+env output: '"gosublime.margo.r13.04.24-1.windows-x64.exe -env"' is not recognized as an internal or external command,
+operable program or batch file.
+--------------------------------
+
+** 2013-07-31 19:48:28.935237 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+
+** 2013-08-14 03:28:22.819951 **:
+MarGo: Cannot load env vars: Decode Error: No JSON object could be decoded
+env output: '"gosublime.margo.r13.04.24-1.windows-x64.exe -env"' is not recognized as an internal or external command,
+operable program or batch file.
+--------------------------------
+
+** 2013-08-14 03:28:22.826952 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
+
+** 2013-08-15 01:05:13.698793 **:
+MarGo: Cannot load env vars: Decode Error: No JSON object could be decoded
+env output: '"gosublime.margo.r13.04.24-1.windows-x64.exe -env"' is not recognized as an internal or external command,
+operable program or batch file.
+--------------------------------
+
+** 2013-08-15 01:05:13.704793 **:
+MarGo: Missing required environment variables: GOPATH
+See the `Quirks` section of USAGE.md for info
+--------------------------------
