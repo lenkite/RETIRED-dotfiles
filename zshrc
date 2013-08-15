@@ -90,10 +90,10 @@ fi
 export EDITOR='vim'
 source ~/dotfiles/histenv
 function gitenv-sap() {
-    source ~/dotfiles/gitenv-sap
+    source ~/dotfiles/env/gitenv-sap
 }
 function gitenv-hub() {
-   source ~/dotfiles/gitenv-hub
+   source ~/dotfiles/env/gitenv-hub
 }
 source ~/dotfiles/git.zsh
 
