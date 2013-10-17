@@ -41,7 +41,7 @@ git clone --depth=1 https://github.com/groenewege/vim-less.git vim/bundle/vim-le
 # Snipmate-snippets was formed from honza..add him as upstream
 git clone --depth=1 https://github.com/lenkite/snipmate-snippets.git -b master vim/bundle/snipmate-snippets 
 cd vim/bundle/snipmate-snippets
-git remote add upstream https://github.com/honza/snipmate-snippets.git
+git remote add upstream https://github.com/honza/vim-snippets.git
 git fetch upstream
 git merge upstream/master
 cd ../../../
