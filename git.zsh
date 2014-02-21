@@ -1,4 +1,5 @@
 # Stuff for git
+# THis stuff is from Oh my Zsh. I just commented out the compdef stuff
 #Git aliases here
 alias g='git'
 alias glg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
@@ -90,3 +91,9 @@ vcs_info_wrapper() {
 }
 RPROMPT=$'$(vcs_info_wrapper)'
 
+# Adding aliases recommended in
+# http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+alias gfl='git log -u'
+alias gdc="git diff --cached 'HEAD^'"
+alias gf='git ls-files | grep -i'
+alias lasttag='git describe --tags --abbrev=0'

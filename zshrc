@@ -18,8 +18,10 @@ fi
 autoload -U zmv
 #autoload -U promptinit
 #promptinit
-#autoload -U compinit #Used for compdef function. See aliases
-#compinit
+if [[ ! $OS = Windows* ]]; then
+    autoload -U compinit #Used for compdef function. See aliases
+    compinit
+fi
 
 # http://superuser.com/questions/362227/how-to-change-the-title-of-the-mintty-window
 # Change title of MinTTY to current dir
