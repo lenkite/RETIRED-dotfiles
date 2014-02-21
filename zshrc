@@ -1,15 +1,17 @@
-source ~/dotfiles/ttycolors/zenburn.sh
+if [[ $OS = Windows* ]]; then
+    #mintty zenburn colors
+    source $dotfiles/ttycolors/zenburn.sh
+fi
 setopt AUTOCD
 setopt CD_ABLE_VARS
 setopt PUSHD_IGNORE_DUPS AUTOPUSHD
 setopt CORRECT
 setopt EXTENDED_GLOB
+
 set -o vi
 if [[ $OS = Windows* ]]; then
     progfiles="`/usr/bin/cygpath -au 'c:\Program Files (x86)'`"
 fi
-
-export PATH="$HOME/dotfiles/scripts:/usr/bin:${PATH}"
 
 # Autoloads
 # http://www.refining-linux.org/archives/36/ZSH-Gem-1-Programmable-file-renaming/
@@ -81,21 +83,24 @@ function proxyclear() {
 
 #Figure out whether I should set proxy or not.
 #I don't think this works when I am connected remotely...
-myip=`ipconfig | grep -i 'IPv4 Address' | cut -d:  -f2`
-myip=`echo $myip| tr -d '[[:space:]]'`
-if [[ "$myip" != 192.168.1* ]]; then
-    proxyset
+
+if [[ $OS = Windows* ]]; then
+    myip=`ipconfig | grep -i 'IPv4 Address' | cut -d:  -f2`
+    myip=`echo $myip| tr -d '[[:space:]]'`
+    if [[ "$myip" != 192.168.1* ]]; then
+        proxyset
+    fi
 fi
 
 export EDITOR='vim'
-source ~/dotfiles/histenv
+source $dotfiles/histenv
 function gitenv-sap() {
-    source ~/dotfiles/env/gitenv-sap
+    source $dotfiles/env/gitenv-sap
 }
 function gitenv-hub() {
-   source ~/dotfiles/env/gitenv-hub
+   source $dotfiles/env/gitenv-hub
 }
-source ~/dotfiles/git.zsh
+source $dotfiles/git.zsh
 
 # Mounts
 if [[ $OS = Windows* ]]; then
@@ -139,7 +144,18 @@ kill $pid
 }
 
 #Ok now load some zsh libraries if present
-if [[ -d  ~/dotfiles/scripts/github/z ]]; then
-    . ~/dotfiles/scripts/github/z/z.sh
+if [[ -d  $dotfiles/scripts/github/z ]]; then
+    . $dotfiles/scripts/github/z/z.sh
 fi
 cd ~
+
+
+# Add colors to osx terminal
+# http://osxdaily.com/2012/02/21/add-color-to-the-terminal-in-mac-os-x/
+# Currently use the theme:  Deluxive State
+# https://github.com/Deluxive/osx-terminal-themes/blob/master/Deluxive%20State.terminal
+if [[ $TERM_PROGRAM == "Apple_Terminal" ]]; then
+    echo "Setting ls colors assuming dark themed terminal"
+    export CLICOLOR=1
+    export LSCOLORS=GxFxCxDxBxegedabagaced #for dark terminal
+fi

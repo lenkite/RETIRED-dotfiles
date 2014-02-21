@@ -7,7 +7,8 @@ set home=%USERPROFILE%
 
 REM Set necessary env variables
 setx HOME %USERPROFILE%
-setx PATH "%PATH%
+REM setx PATH "%PATH%"
+setx dotfiles "%dotdir%"
 
 set SDKHOME=c:\sdk
 if not exist %SDKHOME% set SDKHOME=d:\sdk
@@ -25,7 +26,8 @@ mklink %home%\.inputrc %dotdir%\inputrc
 del /q %home%\.bash_profile
 REM mklink %home%\.bash_profile %dotdir%\bash_profile
 del /q %home%\.zprofile
-mklink %home%\.zprofile %dotdir%\zprofile
+del /q %home%\.zshenv
+mklink %home%\.zshenv %dotdir%\zshenv
 del /q %home%\.bashrc
 mklink %home%\.bashrc %dotdir%\bashrc
 del /q %home%\.zshrc

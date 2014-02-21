@@ -1,4 +1,9 @@
 #!/bin/zsh
+if [[ -z dotfiles ]]; then
+	export dotfiles=`dirname $0`
+fi
+cd $dotfiles
+
 if [[ ! -d autoload ]]; then
     mkdir vim/{autoload,bundle}
 fi

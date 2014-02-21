@@ -33,7 +33,7 @@ set mat=2 "How many tenths of a second to blink
 
 
 " When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/dotfiles/vimrc
+autocmd! bufwritepost vimrc source "$dotfiles/vimrc"
 
 
 
@@ -134,7 +134,7 @@ cmap w!! %!sudo tee > /dev/null %
 " it
 function! CopyMatchIt()
     if has("unix") || has("win32unix")
-        let homePluginDir= $HOME . '/dotfiles/vim/plugin/'
+        let homePluginDir= "$dotfiles/vim/plugin/"
         if !filereadable(homePluginDir . "/matchit.vim")
             if !isdirectory(homePluginDir)
                 exec ':silent !mkdir ' . homePluginDir
@@ -142,7 +142,7 @@ function! CopyMatchIt()
             exec ':silent !cp "' . $VIMRUNTIME . '/macros/matchit.vim" ' . homePluginDir
         endif
     elseif has("win32")
-        let homePluginDir= $HOME . '\dotfiles\vim\plugin\'
+        let homePluginDir= $dotfiles\vim\plugin\'
         if !filereadable(homePluginDir . "/matchit.vim")
             if !isdirectory(homePluginDir)
                 exec ':silent !mkdir ' . homePluginDir
