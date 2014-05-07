@@ -5,7 +5,11 @@ if [[ `uname` == 'Darwin' ]] ; then
 	echo "Running osx"
 fi
 
-export dotfiles=`dirname $0`
+#export dotfiles=`dirname $0`
+#http://stackoverflow.com/questions/5756524/how-to-get-absolute-path-name-of-shell-script-on-macos
+# it is really crappy that we don't have a better way to get full path to a script
+export dotfiles=$(cd "$(dirname "$0")"; pwd)
+
 echo "Dot files directory: $dotfiles"
 # if [ "$osx" = true ]
 export SDKHOME=~/sdk
@@ -30,9 +34,9 @@ ln $dotfiles/zshenv ~/.zshenv
 rm ~/.vimrc 2> /dev/null
 ln $dotfiles/vimrc ~/.vimrc
 
-
 rm ~/.vim 2> /dev/null
-ln -s $dotfiles/vimfiles ~/.vim
+echo "ln -s $dotfiles/vim ~/.vim"
+ln -s $dotfiles/vim ~/.vim
 
 echo "Now kindly run setup.zsh"
 
