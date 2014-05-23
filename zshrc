@@ -8,7 +8,13 @@ setopt PUSHD_IGNORE_DUPS AUTOPUSHD
 setopt CORRECT
 setopt EXTENDED_GLOB
 
+
+# http://dougblack.io/words/zsh-vi-mode.html
 set -o vi
+bindkey -v
+export KEYTIMEOUT=1 # very important for lag killing.
+
+
 if [[ $OS = Windows* ]]; then
     progfiles="`/usr/bin/cygpath -au 'c:\Program Files (x86)'`"
 fi
@@ -121,8 +127,8 @@ export SHELL='zsh'
 export PS1='%~$ '
 
 
-if [ -f "${HOME}/dotfiles/aliases" ]; then
-   source "${HOME}/dotfiles/aliases"
+if [ -f "$dotfiles/aliases" ]; then
+   source "$dotfiles/aliases"
 fi
 
 
@@ -151,6 +157,30 @@ if [[ -d  $dotfiles/scripts/github/z ]]; then
 fi
 cd ~
 
+# function abspath() {
+#     if [ -d "$1" ]; then
+#         ( cd "$1"; dirs -l +0 )
+#     else
+#         ( cd "$(dirname "$1")"; d=$(dirs -l +0); echo "${d%/}/${1##*/}" )
+#     fi
+# }
+# function abspath() { 
+# pushd . > /dev/null; 
+# if [ -d "$1" ]; then cd "$1"; 
+#     dirs -l +0; 
+# else 
+#     cd "`dirname \"$1\"`"; 
+#     cur_dir=`dirs -l +0`; 
+#     if [ "$cur_dir" == "/" ]; then
+#         echo "$cur_dir`basename \"$1\"`"; 
+#     else 
+#         echo "$cur_dir/`basename \"$1\"`"; 
+#     fi;
+# fi; 
+# popd > /dev/null; 
+# }
+
+
 
 # Add colors to osx terminal
 # http://osxdaily.com/2012/02/21/add-color-to-the-terminal-in-mac-os-x/
@@ -161,3 +191,78 @@ if [[ $TERM_PROGRAM == "Apple_Terminal" ]]; then
     export CLICOLOR=1
     export LSCOLORS=GxFxCxDxBxegedabagaced #for dark terminal
 fi
+
+
+### ZSH Completion and Module stuff
+# from http://www.nparikh.org/notes/zshrc.txt
+
+# compinit initializes various advanced completions for zsh
+autoload -U compinit && compinit 
+# zmv is a batch file rename tool; e.g. zmv '(*).text' '$1.txt'
+autoload zmv
+
+# -----------------------------------------------
+# Set up zsh autocompletions
+# -----------------------------------------------
+
+# case-insensitive tab completion for filenames (useful on Mac OS X)
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# General completion technique
+zstyle ':completion:*' completer _complete _correct _approximate _prefix
+zstyle ':completion:*' completer _complete _prefix
+zstyle ':completion::prefix-1:*' completer _complete
+zstyle ':completion:incremental:*' completer _complete _correct
+zstyle ':completion:predict:*' completer _complete
+
+# Completion caching
+zstyle ':completion::complete:*' use-cache 1
+zstyle ':completion::complete:*' cache-path ~/.zsh/cache/$HOST
+
+# Expand partial paths
+zstyle ':completion:*' expand 'yes'
+zstyle ':completion:*' squeeze-slashes 'yes'
+
+# Don't complete backup files as executables
+zstyle ':completion:*:complete:-command-::commands' ignored-patterns '*\~'
+
+# Separate matches into groups
+zstyle ':completion:*:matches' group 'yes'
+
+# Describe each match group.
+zstyle ':completion:*:descriptions' format "%B---- %d%b"
+
+# Messages/warnings format
+zstyle ':completion:*:messages' format '%B%U---- %d%u%b' 
+zstyle ':completion:*:warnings' format '%B%U---- no match for: %d%u%b'
+ 
+# Describe options in full
+zstyle ':completion:*:options' description 'yes'
+zstyle ':completion:*:options' auto-description '%d'
+
+zstyle ':completion:*:history-words' stop yes
+zstyle ':completion:*:history-words' remove-all-dups yes
+zstyle ':completion:*:history-words' list false
+zstyle ':completion:*:history-words' menu yes
+
+# -----------------------------------------------
+# Set up completion for hostnames
+# -----------------------------------------------
+
+# if [[ "$ZSH_VERSION_TYPE" == 'new' ]]; then
+#   : ${(A)_etc_hosts:=${(s: :)${(ps:\t:)${${(f)~~"$(</etc/hosts)"}%%\#*}##[:blank:]#[^[:blank:]]#}}}
+# else
+#   # Older versions don't like the above cruft
+#   _etc_hosts=()
+# fi
+
+# hosts=(
+#     "$_etc_hosts[@]"
+
+#     localhost
+#     eniac.seas.upenn.edu
+#     # snip
+# )
+
+# zstyle ':completion:*' hosts $hosts
+

@@ -11,7 +11,7 @@ alias pud='pushd'
 alias pod='popd'
 alias tags='ctags -R --extra=+fq --fields=+ailmnSz .'
 
-alias ls='ls -F --color=auto'
+#alias ls='ls -F --color=auto'
 # list dirs only
 alias lsdir='ls -d */'
 alias grep='grep --color'                     # show differences in colour
@@ -37,3 +37,4 @@ alias moving_animal='curl -s https://raw.github.com/ivolo/animals/master/example
 alias mvn='mvn'
 alias open='cygstart'
 alias cpw='pw . | clip'
+alias msti='mvn -nsu -DskipTests install'
