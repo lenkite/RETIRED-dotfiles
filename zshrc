@@ -2,8 +2,7 @@ if [[ $OS = Windows* ]]; then
     #mintty zenburn colors
     source $dotfiles/ttycolors/zenburn.sh
 else
-    uname=$(uname)
-    export OS=$uname
+    export OS=$OSTYPE
 fi
 setopt AUTOCD
 setopt CD_ABLE_VARS
