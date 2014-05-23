@@ -1,6 +1,9 @@
 if [[ $OS = Windows* ]]; then
     #mintty zenburn colors
     source $dotfiles/ttycolors/zenburn.sh
+else
+    uname=$(uname)
+    export OS=$uname
 fi
 setopt AUTOCD
 setopt CD_ABLE_VARS
@@ -13,6 +16,7 @@ setopt EXTENDED_GLOB
 set -o vi
 bindkey -v
 export KEYTIMEOUT=1 # very important for lag killing.
+
 
 
 if [[ $OS = Windows* ]]; then

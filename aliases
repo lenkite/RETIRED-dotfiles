@@ -35,6 +35,9 @@ alias s='screen'
 alias animal="curl -s 'http://animals.ivolo.me/?index=8'"
 alias moving_animal='curl -s https://raw.github.com/ivolo/animals/master/examples/loading.sh | sh'
 alias mvn='mvn'
-alias open='cygstart'
+if [[ ! $OS == "Darwin" ]]; then
+	# OSX already has an open
+	alias open='cygstart'
+fi
 alias cpw='pw . | clip'
 alias msti='mvn -nsu -DskipTests install'
