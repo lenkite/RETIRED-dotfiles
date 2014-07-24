@@ -8,6 +8,8 @@ set home=%USERPROFILE%
 REM Set necessary env variables
 setx HOME %USERPROFILE%
 REM setx PATH "%PATH%"
+echo "Appending to %PATH%"
+setx PATH "/usr/bin;/bin;%home%/dotfiles/scripts;%PATH%"
 setx dotfiles "%dotdir%"
 
 set SDKHOME=c:\sdk

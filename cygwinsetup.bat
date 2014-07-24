@@ -84,7 +84,7 @@ set wget=%SDKTOOLS%\wget.exe
 set unzip=%SDKTOOLS%\unzip.exe
 if not exist %unzip% (
     echo Downloading unzip.exe into %unzip%
-    wget http://www2.cs.uidaho.edu/~jeffery/win32/unzip.exe -O %unzip%
+    %wget% http://stahlworks.com/dev/unzip.exe -O %unzip%
     if not exist %unzip% (
         echo FATAL: Could not download unzip.exe . Terminating
         exit /B
@@ -97,7 +97,7 @@ if not exist %unzip% (
 set ctags=%SDKTOOLS%\ctags.exe
 if not exist %ctags% (
     echo Downloading ctags.exe into %ctags%
-    wget http://dfn.dl.sourceforge.net/project/ctags/ctags/5.8/ctags58.zip -O %ctags%
+    %wget% http://dfn.dl.sourceforge.net/project/ctags/ctags/5.8/ctags58.zip -O %ctags%
     if not exist %ctags% (
         echo FATAL: Could not download ctags.exe . Terminating
         exit /B

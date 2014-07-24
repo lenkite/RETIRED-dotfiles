@@ -1,5 +1,6 @@
 if [[ $OS = Windows* ]]; then
     #mintty zenburn colors
+    echo "Setting zenburn theme"
     source $dotfiles/ttycolors/zenburn.sh
 else
     export OS=$OSTYPE
@@ -19,7 +20,8 @@ export KEYTIMEOUT=1 # very important for lag killing.
 
 
 if [[ $OS = Windows* ]]; then
-    progfiles="`/usr/bin/cygpath -au 'c:\Program Files (x86)'`"
+    progfiles86="`/usr/bin/cygpath -au 'c:\Program Files (x86)'`"
+    progfiles="`/usr/bin/cygpath -au 'c:\Program Files'`"
 fi
 
 # Autoloads
@@ -54,7 +56,7 @@ spdf() {
         echo "Usage: spdf <pdfPath>"
     else
         pdfPath=`cygpath -aw  "$1"`
-        "$progfiles/SumatraPDF/SumatraPDF.exe" "$pdfPath" 
+        "$progfiles86/SumatraPDF/SumatraPDF.exe" "$pdfPath" 
     fi
 }
 
@@ -65,7 +67,7 @@ wdiff() {
     else
         f1=`cygpath -aw  "$1"`
         f2=`cygpath -aw  "$2"`
-        "$progfiles/WinMerge/WinMergeU.exe" "$f1" "$f2"
+        "$progfiles86/WinMerge/WinMergeU.exe" "$f1" "$f2"
     fi
 }
 
@@ -74,7 +76,17 @@ scite() {
         echo "Usage: scite <filePath>"
     else
         fpath=`cygpath -aw "$1"`
-        "$progfiles/SciTE/SciTE.exe" "$fpath"
+        "$progfiles86/SciTE/SciTE.exe" "$fpath"
+    fi
+}
+
+# Opens a file using sublime text
+st() {
+    if [[ -z "$1" ]]; then
+        echo "Usage: st <filePath>"
+    else
+        fpath=`cygpath -aw "$1"`
+        "$progfiles/Sublime Text 3/sublime_text.exe" "$fpath"
     fi
 }
 
