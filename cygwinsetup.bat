@@ -2,6 +2,15 @@
 REM See http://cygwin.com/faq/faq.setup.html#faq.setup.cli
 REM See cygwin package list at: http://cygwin.com/packages/
 
+REM Check if -noproxy option has been set.
+if "%1"=="-noproxy" (
+    echo "User has chosen not to use SAP proxy"
+    set noproxy=true
+) else (
+    echo "User has chosen to use SAP proxy"
+    set noproxy=false
+)
+
 set dotdir=%~dp0
 set home=%USERPROFILE%
 goto check_Permissions
@@ -38,12 +47,16 @@ goto :proxy
 :proxy
 echo Target install drive is %targetdrive%
 
-if not defined http_proxy (
-    echo HTTP Proxy not set. Defaulting to proxy.wdf.sap.corp:8080 
-    set http_proxy=proxy.wdf.sap.corp:8080
+if "%noproxy"=="false" (
+    echo "Setting SAP http(s) proxy"
+    if not defined http_proxy (
+        echo HTTP Proxy not set. Defaulting to proxy.wdf.sap.corp:8080 
+        set http_proxy=proxy.wdf.sap.corp:8080
+    )
+    echo Setting https proxy to same as http proxy
+    set https_proxy=%http_proxy%
 )
-echo Setting https proxy to same as http proxy
-set https_proxy=%http_proxy%
+
 set localpkgdir=%targetdrive%\sdk\cygwin_packages
 set installdir=%targetdrive%\sdk\cygwin
 set cyghome=%installdir%
@@ -129,20 +142,27 @@ if exist setup.log (
     DEL /q setup.log.full
 )
 if not exist %installdir% mkdir %installdir%
-if not exist setup.exe  (
-        echo WARN: cygwin setup.exe NOT found in current directory! Attempting to download via wget...
-        call %wget% http://www.cygwin.com/setup.exe 
+if not exist setup-x86.exe  (
+        echo WARN: cygwin setup-x86.exe NOT found in current directory! Attempting to download via wget...
+        call %wget% http://www.cygwin.com/setup-x86.exe 
         if NOT ERRORLEVEL 0 (
-            echo ERROR: Could not download cygwin setup.exe. Terminating
+            echo ERROR: Could not download cygwin setup-x86.exe. Terminating
             exit /B
         )
 )
+
+if "%noproxy%"=="false" (
+    set proxyoption="--proxy %http_proxy% ^"
+)
+
+REM --proxy %http_proxy% ^
+
 if not defined skipsetup (
     if exist %localpkgdir% rmdir %localpkgdir%
     echo INVOKING cygwin setup.exe...
-setup.exe ^
+setup-x86.exe ^
 --disable-buggy-antivirus ^
---proxy %http_proxy% ^
+%proxyoption%
 --local-package-dir %localpkgdir% ^
 --root %installdir% ^
 --quiet-mode ^
