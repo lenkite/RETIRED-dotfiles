@@ -5,7 +5,7 @@ SETUP
 - Open DOS Command Prompt and run cygwinsetup.bat. If you wish to run cygwinsetup.bat with no proxy then invoke cygwinsetup.bat with "-noproxy" command line parameter.
 - If you are on windows run init.bat in ADMINISTRATOR mode command prompt. (This guy creates the hard links to the dotfiles directory. Ex: from .bashrc to dotfiles/.bashrc, changes shell and fixes home directory in /etc/passwd etc)
 - Setup mintty shortcut
-- Then open up cygwin, navigate here and run setup.zsh
+- Then open up cygwin, navigate here and run setup.zsh. User can choose to run setup.zsh with -noproxy option.
 - Modify gitenv-sap, gitenv-hub with your git environment setup
 - Before doing GIT development run the shell function gitenv-hub() or gitenv-sap(). This will
 source the relevant git file.
