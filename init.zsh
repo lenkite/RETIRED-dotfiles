@@ -34,9 +34,19 @@ ln $dotfiles/zshenv ~/.zshenv
 rm ~/.vimrc 2> /dev/null
 ln $dotfiles/vimrc ~/.vimrc
 
-rm ~/.vim 2> /dev/null
-echo "ln -s $dotfiles/vim ~/.vim"
-ln -s $dotfiles/vim ~/.vim
+if [[ -z "$osx" ]]; then
+ rm ~/.vim 2> /dev/null
+ echo "ln -s $dotfiles/vim ~/.vim"
+ ln -s $dotfiles/vim ~/.vim
+elif type hardlink > /dev/null 2>&1 ; then
+ [ -d $HOME/.vim ] && hardlink -u $HOME/.vim
+ # ln is crippled on OSX. We need https://github.com/selkhateeb/hardlink
+ # http://stackoverflow.com/questions/592620/how-to-check-if-a-program-exists-from-a-bash-script
+ echo "hardlink $dotfiles $HOME/.vim"
+ hardlink $dotfiles $HOME/.vim
+else
+ echo "hardlink not found!"
+fi
 
 echo "Now kindly run setup.zsh"
 

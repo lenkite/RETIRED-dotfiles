@@ -20,6 +20,7 @@ alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
 alias la='ls -A'                              # all but . and ..
 alias l='ls -CF'                              #
+alias ls="ls -GFlash"
 alias ll='ls -al'
 alias llt='ls -F -alt'
 alias pw='cygpath -aw'
@@ -35,9 +36,11 @@ alias s='screen'
 alias animal="curl -s 'http://animals.ivolo.me/?index=8'"
 alias moving_animal='curl -s https://raw.github.com/ivolo/animals/master/examples/loading.sh | sh'
 alias mvn='mvn'
-if [[ ! $OS == "Darwin" ]]; then
+if [[ ! $OS = darwin* ]]; then
+	echo "YOMAMA"
 	# OSX already has an open
 	alias open='cygstart'
 fi
 alias cpw='pw . | clip'
-alias msti='mvn -nsu -DskipTests install'
+alias mti='mvn -nsu -DskipTests install'
+alias mcti='mvn -nsu -DskipTests clean install'

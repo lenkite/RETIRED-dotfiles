@@ -219,6 +219,7 @@ set wildmode=list:longest,full
 au FileType xml  setl iskeyword+=-,.
 au FileType less setl iskeyword+=-,.
 au FileType css setl iskeyword+=-,.
+au FileType gitcommit set spell tw=72
 
 "}
 
