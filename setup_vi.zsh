@@ -21,6 +21,7 @@ git clone --depth=1 https://github.com/scrooloose/nerdcommenter.git  -b master v
 git clone --depth=1 https://github.com/majutsushi/tagbar  -b master vim/bundle/tagbar
 git clone --depth=1 https://github.com/vim-scripts/ZoomWin.git -b master vim/bundle/zoomwin
 git clone --depth=1 https://github.com/vim-scripts/CRefVim.git -b master vim/bundle/crefvim
+git clone --depth=1 https://github.com/xolox/vim-misc.git  -b master vim/bundle/vim-misc.git 
 git clone --depth=1 https://github.com/xolox/vim-session.git  -b master vim/bundle/vim-session.git 
 git clone --depth=1 https://github.com/Lokaltog/vim-easymotion.git -b master vim/bundle/vim-easymotion
 
@@ -33,11 +34,14 @@ git clone --depth=1 https://github.com/garbas/vim-snipmate.git -b master vim/bun
 git clone --depth=1 https://github.com/tomtom/tlib_vim.git -b master vim/bundle/tlib_vim
 git clone --depth=1 https://github.com/MarcWeber/vim-addon-mw-utils.git -b master vim/bundle/vim-addon-mw-utils
 git clone --depth=1 https://github.com/kien/ctrlp.vim.git -b master vim/bundle/ctrlp.vim
-git clone --depth=1 https://github.com/mattn/zencoding-vim.git -b master vim/bundle/zencoding-vim
+git clone --depth=1 https://github.com/mattn/emmet-vim.git -b master vim/bundle/emmet-vim
 rm -rf mintty/mintty-colors-solarized
 git clone --depth=1 https://github.com/skammer/vim-css-color.git vim/bundle/vim-css-color
 git clone --depth=1 https://github.com/hail2u/vim-css3-syntax.git vim/bundle/vim-css3-syntax
 git clone --depth=1 https://github.com/groenewege/vim-less.git vim/bundle/vim-less
+
+git clone --depth=1 https://github.com/wting/rust.vim.git  vim/bundle/rust.vim
+
 
 #tiled window management for VIM
 # this guy overwrites C-N and my switch window bindings. saying tata to him

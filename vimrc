@@ -194,11 +194,11 @@ nnoremap / :set hlsearch<cr>/
 
 " }
 "Call Pathogen {
-"filetype off
-"call pathogen#infect()
-"call pathogen#helptags()
-"syntax on
-"filetype plugin indent on
+filetype off
+call pathogen#infect()
+call pathogen#helptags()
+syntax on
+filetype plugin indent on
 "}
 
 " UI Related {

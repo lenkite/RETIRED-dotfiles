@@ -42,8 +42,7 @@ elif type hardlink > /dev/null 2>&1 ; then
  [ -d $HOME/.vim ] && hardlink -u $HOME/.vim
  # ln is crippled on OSX. We need https://github.com/selkhateeb/hardlink
  # http://stackoverflow.com/questions/592620/how-to-check-if-a-program-exists-from-a-bash-script
- echo "hardlink $dotfiles $HOME/.vim"
- hardlink $dotfiles $HOME/.vim
+ hardlink $dotfiles/vim $HOME/.vim
 else
  echo "hardlink not found!"
 fi
