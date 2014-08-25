@@ -1,5 +1,8 @@
 # Declare that all java files will always have LF line endings on checkout.
 *.sh text eol=lf
+zshrc text eol=lf
+zshrc text eol=lf
+bashrc text eol=lf
 *.zsh text eol=lf
 *.bat text eol=crlf
 

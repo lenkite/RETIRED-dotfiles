@@ -259,25 +259,3 @@ zstyle ':completion:*:history-words' stop yes
 zstyle ':completion:*:history-words' remove-all-dups yes
 zstyle ':completion:*:history-words' list false
 zstyle ':completion:*:history-words' menu yes
-
-# -----------------------------------------------
-# Set up completion for hostnames
-# -----------------------------------------------
-
-# if [[ "$ZSH_VERSION_TYPE" == 'new' ]]; then
-#   : ${(A)_etc_hosts:=${(s: :)${(ps:\t:)${${(f)~~"$(</etc/hosts)"}%%\#*}##[:blank:]#[^[:blank:]]#}}}
-# else
-#   # Older versions don't like the above cruft
-#   _etc_hosts=()
-# fi
-
-# hosts=(
-#     "$_etc_hosts[@]"
-
-#     localhost
-#     eniac.seas.upenn.edu
-#     # snip
-# )
-
-# zstyle ':completion:*' hosts $hosts
-
