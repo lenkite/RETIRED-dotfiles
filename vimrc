@@ -1,16 +1,34 @@
-" Source SPF vimrc {
-" vim: set foldmarker={,} foldlevel=0 foldmethod=marker:
-"
-"source ~\dotfiles\spf13.vimrc
-"}
-
-
 " Modeline and Notes {
 " vim: set foldmarker={,} foldlevel=0 foldmethod=marker:
 "   Tarun Ramakrishna Elankath's vimrc file. Been using VIM for 8 years now. 
 "   Re-created from scratch on Aug 20, 2011
 "   https://github.com/lenkite/dotfiles
 " }
+
+
+" Vundle Setup {
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'majutsushi/tagbar' 
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'wting/rust.vim'
+Plugin 'scrooloose/syntastic'
+
+call vundle#end()            
+filetype plugin indent on   
+syntax on 
+" }
+
+
 
 
 " Sets how many lines of history VIM has to remember
@@ -33,8 +51,7 @@ set mat=2 "How many tenths of a second to blink
 
 
 " When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source "$dotfiles/vimrc"
-
+autocmd! bufwritepost vimrc source %
 
 
 
@@ -193,19 +210,13 @@ nnoremap / :set hlsearch<cr>/
 "
 
 " }
-"Call Pathogen {
-filetype off
-call pathogen#infect()
-call pathogen#helptags()
-syntax on
-filetype plugin indent on
-"}
+
 
 " UI Related {
 "http://vim.wikia.com/wiki/Great_wildmode/wildmenu_and_console_mouse
 set wildmenu
 set wildmode=list:longest,full
-"colo zenburn
+silent! colorscheme zenburn
 " visual searching
 :vmap // y/<C-R>"<CR>     "search for visually highlighted text  
 " Pull word under cursor into LHS of a substitute

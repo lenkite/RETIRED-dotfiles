@@ -1,3 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/t/Library/Preferences/IntelliJ IDEA 13.app'
+let g:netrw_dirhist_2='/Users/t/sap/nm2/nmcore2/store/bndl/entity.ddl'
+let g:netrw_dirhist_3='/Users/t/sap/nm2/nmcore2/store/bndl'
+let g:netrw_dirhist_4='/Users/t/sdk/neo/tools/log'
+let g:netrw_dirhist_5='/Users/t/dev/learn/cordova-learn/hello'
+let g:netrw_dirhist_6='/Users/t/dev/dotfiles'
+let g:netrw_dirhist_7='/Users/t/dev/learn/rust-learn/.git/branches'
