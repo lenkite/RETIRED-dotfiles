@@ -14,4 +14,6 @@ temp
 zsh.exe.stackdump
 st3/user/GoSublime/9/log.txt
 st3/user/Package Control.last-run
-
+**/*.swp
+**/*~
+**/*.swo
