@@ -1,0 +1,21 @@
+#!/bin/bash
+
+branch=$1
+if [[ ! -z $branch ]]; then
+    echo "Will git pull sub-directories for branch $branch" 
+else
+    echo "Will git pull sub-directories at current branch"
+fi
+for d in */ ; do
+    cd "$d"
+    if [ -d ".git" ]; then
+        if [[ ! -z $branch ]]; then
+            echo "Changing branch to $branch"
+            git checkout $branch
+        fi
+        echo "Git pulling $d ..."
+        git pull
+        cd ..
+    fi
+    echo "$d"
+done

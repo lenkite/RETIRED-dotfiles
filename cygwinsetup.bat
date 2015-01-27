@@ -47,11 +47,11 @@ goto :proxy
 :proxy
 echo Target install drive is %targetdrive%
 
-if "%noproxy"=="false" (
+if "%noproxy%"=="false" (
     echo "Setting SAP http(s) proxy"
     if not defined http_proxy (
-        echo HTTP Proxy not set. Defaulting to proxy.wdf.sap.corp:8080 
-        set http_proxy=proxy.wdf.sap.corp:8080
+        echo HTTP Proxy not set. Defaulting to proxy.blrl.sap.corp:8080 
+        set http_proxy=proxy.blrl.sap.corp:8080
     )
     echo Setting https proxy to same as http proxy
     set https_proxy=%http_proxy%
@@ -97,7 +97,7 @@ set wget=%SDKTOOLS%\wget.exe
 set unzip=%SDKTOOLS%\unzip.exe
 if not exist %unzip% (
     echo Downloading unzip.exe into %unzip%
-    %wget% http://stahlworks.com/dev/unzip.exe -O %unzip%
+    cmd /c bitsadmin /Transfer UnzipExeDownload /priority high http://stahlworks.com/dev/unzip.exe %unzip%
     if not exist %unzip% (
         echo FATAL: Could not download unzip.exe . Terminating
         exit /B
@@ -110,7 +110,7 @@ if not exist %unzip% (
 set ctags=%SDKTOOLS%\ctags.exe
 if not exist %ctags% (
     echo Downloading ctags.exe into %ctags%
-    %wget% http://dfn.dl.sourceforge.net/project/ctags/ctags/5.8/ctags58.zip -O %ctags%
+    cmd /c bitsadmin /Transfer UnzipExeDownload /priority high http://stahlworks.com/dev/unzip.exe %ctags%
     if not exist %ctags% (
         echo FATAL: Could not download ctags.exe . Terminating
         exit /B
@@ -152,7 +152,7 @@ if not exist setup-x86.exe  (
 )
 
 if "%noproxy%"=="false" (
-    set proxyoption="--proxy %http_proxy% ^"
+    set proxyoption=--proxy %http_proxy%
 )
 
 REM --proxy %http_proxy% ^
@@ -162,8 +162,7 @@ if not defined skipsetup (
     echo INVOKING cygwin setup.exe...
 setup-x86.exe ^
 --disable-buggy-antivirus ^
-%proxyoption%
---local-package-dir %localpkgdir% ^
+%proxyoption% --local-package-dir %localpkgdir% ^
 --root %installdir% ^
 --quiet-mode ^
 --only-site ^
