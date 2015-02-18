@@ -7,6 +7,7 @@ else
     echo "Will git pull sub-directories at current branch"
 fi
 for d in */ ; do
+    echo "Changing to directory $d"
     cd "$d"
     if [ -d ".git" ]; then
         if [[ ! -z $branch ]]; then
@@ -15,7 +16,7 @@ for d in */ ; do
         fi
         echo "Git pulling $d ..."
         git pull
-        cd ..
     fi
+    cd ..
     echo "$d"
 done
