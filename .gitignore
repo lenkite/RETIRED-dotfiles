@@ -1,5 +1,6 @@
 cygwin_install
 http*
+vim/.netrwhist
 bash_history
 vim/bundle
 vim/bundle/*
