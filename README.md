@@ -1,7 +1,7 @@
-SETUP
-- Clone this repository into your home directory - it should be at path ~/dotfiles
-- Disable Antivirus if you prefer speed of installation.
-- Download cygwin 'setup-x86.exe' here.
+# SETUP
+* Clone this repository into your home directory - it should be at path ~/dotfiles
+* Disable Antivirus if you prefer speed of installation.
+* Download cygwin {{setup-x86.exe}} here.
 - Open DOS Command Prompt and run cygwinsetup.bat. If you wish to run cygwinsetup.bat with no proxy then invoke cygwinsetup.bat with "-noproxy" command line parameter.
 - If you are on windows run init.bat in ADMINISTRATOR mode command prompt. (This guy creates the hard links to the dotfiles directory. Ex: from .bashrc to dotfiles/.bashrc, changes shell and fixes home directory in /etc/passwd etc)
 - Setup mintty shortcut
