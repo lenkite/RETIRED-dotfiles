@@ -11,6 +11,7 @@
 source the relevant git file.
 - `vundle` is used as the VIM package manager. In order for vundle to work properly behind a proxy, ensure that `git config --global https.proxy` and `git config --global http.proxy` are set correctly
 - That's all for now.
+
 ## TIPS
 - CD automatically pushes directory onto stack
 - You can use cd - to toggle between first two directories on stack
