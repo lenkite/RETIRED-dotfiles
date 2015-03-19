@@ -10,6 +10,7 @@
 - Before doing GIT development run the shell function `gitenv-hub()` or `gitenv-sap()`. This will
 source the relevant git file.
 - `vundle` is used as the VIM package manager. In order for vundle to work properly behind a proxy, ensure that `git config --global https.proxy` and `git config --global http.proxy` are set correctly
+- Open vim and issue `PluginInstall` command
 - That's all for now.
 
 ## TIPS
