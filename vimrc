@@ -149,26 +149,26 @@ cmap w!! %!sudo tee > /dev/null %
 " so you have to create a string with the command you want, and then pass it to :exe 
 " and hte fuckly elseif is one word or you can the stupid E488 if you separate
 " it
-function! CopyMatchIt()
-    if has("unix") || has("win32unix")
-        let homePluginDir= "$dotfiles/vim/plugin/"
-        if !filereadable(homePluginDir . "/matchit.vim")
-            if !isdirectory(homePluginDir)
-                exec ':silent !mkdir ' . homePluginDir
-            endif
-            exec ':silent !cp "' . $VIMRUNTIME . '/macros/matchit.vim" ' . homePluginDir
-        endif
-    elseif has("win32")
-        let homePluginDir= $dotfiles\vim\plugin\'
-        if !filereadable(homePluginDir . "/matchit.vim")
-            if !isdirectory(homePluginDir)
-                exec ':silent !mkdir ' . homePluginDir
-            endif
-            exec ':silent !copy "' . $VIMRUNTIME . '\macros\matchit.vim" ' . homePluginDir
-        endif
-    endif
-endfunction
-call CopyMatchIt()
+"function! CopyMatchIt()
+"    if has("unix") || has("win32unix")
+"        let homePluginDir= "$dotfiles/vim/plugin/"
+"        if !filereadable(homePluginDir . "/matchit.vim")
+"            if !isdirectory(homePluginDir)
+"                exec ':silent !mkdir ' . homePluginDir
+"            endif
+"            exec ':silent !cp "' . $VIMRUNTIME . '/macros/matchit.vim" ' . homePluginDir
+"        endif
+"    elseif has("win32")
+"        let homePluginDir= $dotfiles\vim\plugin\'
+"        if !filereadable(homePluginDir . "/matchit.vim")
+"            if !isdirectory(homePluginDir)
+"                exec ':silent !mkdir ' . homePluginDir
+"            endif
+"            exec ':silent !copy "' . $VIMRUNTIME . '\macros\matchit.vim" ' . homePluginDir
+"        endif
+"    endif
+"endfunction
+"call CopyMatchIt()
 
 
 
