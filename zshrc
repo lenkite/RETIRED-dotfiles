@@ -123,6 +123,10 @@ function gitenv-sap() {
 function gitenv-hub() {
    source $dotfiles/env/gitenv-hub
 }
+function gitenv-bbt() {
+   source $dotfiles/env/gitenv-bbt
+}
+
 source $dotfiles/git.zsh
 
 # Mounts
