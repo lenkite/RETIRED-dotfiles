@@ -23,7 +23,6 @@ alias l='ls -CF'                              #
 alias ls="ls -GFlash"
 alias ll='ls -al'
 alias llt='ls -F -alt'
-alias pw='cygpath -aw'
 alias mvne="mvn eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true"
 alias mvnc="mvn clean"
 alias nsumvne="mvn -nsu eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true"
@@ -41,6 +40,15 @@ if [[ ! $OS = darwin* ]]; then
 	# OSX already has an open
 	alias open='cygstart'
 fi
-alias cpw='pw . | clip'
+
+pw() {
+    if [[ $OS =~ Windows ]]; then
+        cygpath -aw $1 | clip
+    elif [[ $OS =~ darwin ]]; then
+        p=`grealpath $1`
+        echo $p
+        echo $p | pbcopy
+    fi
+}
 alias mti='mvn -nsu -DskipTests install'
 alias mcti='mvn -nsu -DskipTests clean install'
