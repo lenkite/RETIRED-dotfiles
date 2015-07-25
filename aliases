@@ -35,11 +35,15 @@ alias s='screen'
 alias animal="curl -s 'http://animals.ivolo.me/?index=8'"
 alias moving_animal='curl -s https://raw.github.com/ivolo/animals/master/examples/loading.sh | sh'
 alias mvn='mvn'
-if [[ ! $OS = darwin* ]]; then
-	echo "YOMAMA"
-	# OSX already has an open
+
+. $dotfiles/osdetect.zsh
+
+if [ "$iswindows" = true ]; then
 	alias open='cygstart'
+elif [ "$islinux" = true ]; then
+    alias open="xdg-open"
 fi
+#osx already has a open command
 
 pw() {
     if [[ $OS =~ Windows ]]; then
