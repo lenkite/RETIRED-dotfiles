@@ -34,6 +34,7 @@ alias nsumsi='mvn -nsu -DskipTests install'
 alias s='screen'
 alias animal="curl -s 'http://animals.ivolo.me/?index=8'"
 alias moving_animal='curl -s https://raw.github.com/ivolo/animals/master/examples/loading.sh | sh'
+alias mvndirs='mkdir -p src/main/java && mkdir -p src/main/resources && mkdir -p src/test/java && mkdir -p src/test/resources'
 alias mvn='mvn'
 
 . $dotfiles/osdetect.zsh
