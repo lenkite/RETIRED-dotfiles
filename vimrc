@@ -22,6 +22,9 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'wting/rust.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()            
 filetype plugin indent on   

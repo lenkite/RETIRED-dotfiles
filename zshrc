@@ -1,10 +1,3 @@
-if [[ $OS = Windows* ]]; then
-    #mintty zenburn colors
-    echo "Setting zenburn theme"
-    source $dotfiles/ttycolors/zenburn.sh
-else
-    export OS=$OSTYPE
-fi
 setopt AUTOCD
 setopt CD_ABLE_VARS
 setopt PUSHD_IGNORE_DUPS AUTOPUSHD
@@ -18,11 +11,6 @@ bindkey -v
 export KEYTIMEOUT=1 # very important for lag killing.
 
 
-
-if [[ $OS = Windows* ]]; then
-    progfiles86="`/usr/bin/cygpath -au 'c:\Program Files (x86)'`"
-    progfiles="`/usr/bin/cygpath -au 'c:\Program Files'`"
-fi
 
 # Autoloads
 # http://www.refining-linux.org/archives/36/ZSH-Gem-1-Programmable-file-renaming/
@@ -104,17 +92,6 @@ function proxyclear() {
 }
 
 
-#Figure out whether I should set proxy or not.
-#I don't think this works when I am connected remotely...
-
-if [[ $OS = Windows* ]]; then
-    myip=`ipconfig | grep -i 'IPv4 Address' | cut -d:  -f2`
-    myip=`echo $myip| tr -d '[[:space:]]'`
-    if [[ "$myip" != 192.168.1* ]]; then
-        proxyset
-    fi
-fi
-
 export EDITOR='vim'
 source $dotfiles/histenv
 function gitenv-sap() {
@@ -129,15 +106,6 @@ function gitenv-bbt() {
 
 source $dotfiles/git.zsh
 
-# Mounts
-if [[ $OS = Windows* ]]; then
-    if [[ -d /cygdrive/c ]]; then
-        mount c: /c 2> /dev/null
-    fi
-    if [[ -d /cygdrive/d ]]; then
-        mount d: /d 2> /dev/null
-    fi
-fi
 
 #bindkeys
 bindkey ' ' magic-space
@@ -146,9 +114,6 @@ export SHELL='zsh'
 export PS1='%~$ '
 
 
-if [ -f "$dotfiles/aliases" ]; then
-   source "$dotfiles/aliases"
-fi
 
 
 #Setup SSH Agent
@@ -263,3 +228,17 @@ zstyle ':completion:*:history-words' stop yes
 zstyle ':completion:*:history-words' remove-all-dups yes
 zstyle ':completion:*:history-words' list false
 zstyle ':completion:*:history-words' menu yes
+
+source $dotfiles/osdetect.zsh
+if [[ iswin ]]; then
+    source $dotfiles/windows.zsh
+elif [[ isosx ]]; then
+    source $dotfiles/osx.zsh
+elif [[ islinux ]]; then
+    source $dotfiles/linux.zsh
+else
+    export OS=$OSTYPE
+fi
+if [ -f "$dotfiles/aliases" ]; then
+   source "$dotfiles/aliases"
+fi

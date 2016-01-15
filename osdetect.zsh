@@ -1,9 +1,9 @@
 # Sets variables iswindows, isosx, islinux
 
 if [[  $OS = darwin* ]]; then
-    iswin=true
+    isosx=true
 elif [[ $OS = *linux* ]]; then
     islinux=true
 elif [[ $OS = *Windows* ]]; then
-    iswindows=true
+    iswin=true
 fi

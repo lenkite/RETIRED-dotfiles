@@ -5,7 +5,6 @@ alias df='df -h'
 alias du='du -h'
 # -v	Causes dirs to print the directory stack with one entry per 
 #	line, prefixing each entry with its index in the stack.
-alias dirs='dirs -v'
 alias dv='dirs -v'
 alias pud='pushd'
 alias pod='popd'
@@ -28,7 +27,6 @@ alias mvnc="mvn clean"
 alias nsumvne="mvn -nsu eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true"
 alias wgetvm='wget --no-check-certificate --no-proxy'
 alias mmv='noglob zmv -W'
-alias winkill='taskkill /F /IM'
 alias msi='mvn -DskipTests install'
 alias nsumsi='mvn -nsu -DskipTests install'
 alias s='screen'
@@ -46,16 +44,9 @@ elif [ "$islinux" = true ]; then
 fi
 #osx already has a open command
 
-pw() {
-    if [[ $OS =~ Windows ]]; then
-        cygpath -aw $1 | clip
-    elif [[ $OS =~ darwin ]]; then
-        p=`grealpath $1`
-        echo $p
-        echo $p | pbcopy
-    fi
-}
 alias mti='mvn -nsu -DskipTests install'
 alias mcti='mvn -nsu -DskipTests clean install'
 alias mvndirs='mkdir -p src/main/java && mkdir -p src/main/resources && mkdir -p src/test/java && mkdir -p src/test/resources'
 alias mvndeps='mvn -nsu dependency:tree -f'
+
+
