@@ -27,6 +27,7 @@ fi
 
 # http://zsh.sourceforge.net/Guide/zshguide02.html#l24
 typeset -U path
+path+=( $dotfiles/scripts ~/bin )
 pathsf=~/.paths
 if [[ -f $pathsf ]]; then
 	#http://stackoverflow.com/questions/12651355/zsh-read-lines-from-file-into-array
@@ -36,7 +37,7 @@ if [[ -f $pathsf ]]; then
 	integer POS=1             # Not required unless stuff uses it
 	integer SIZE=$#FLINES     # Number of lines, not required unless stuff uses it
 	# setting path list sets PATH in zsh
-	path+=( $dotfiles/scripts ~/bin $FLINES )
+	path+=( $FLINES )
 	# echo $SIZE
 	# for ITEM in $FLINES; do
 	# 	echo $ITEM
