@@ -3,6 +3,7 @@ setopt CD_ABLE_VARS
 setopt PUSHD_IGNORE_DUPS AUTOPUSHD
 setopt CORRECT
 setopt EXTENDED_GLOB
+setopt HASH_ALL
 
 
 # http://dougblack.io/words/zsh-vi-mode.html

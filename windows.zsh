@@ -31,3 +31,8 @@ function pw() {
 
 # System specific aliases
 alias killall='taskkill /F /IM'
+function sbl() {
+ #assumes that sublime is already on path
+ subl `cygpath -am $*`
+}
+alias open='cygstart $*'
