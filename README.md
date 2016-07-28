@@ -1,3 +1,8 @@
+# DEPRECATED
+This project has been deprecated. With the windows subsystem for Linux, one can now have a common dotfiles across multiple OSe's.
+- See sorin-ionescu/prezto for ZSH configuration
+- See luan/vimfiles for best of breed vim/neovim setup and vim/neovim plugins
+
 # SETUP
 - Clone this repository into your home directory - it should be at path ~/dotfiles
 - Disable Antivirus if you prefer speed of installation.
